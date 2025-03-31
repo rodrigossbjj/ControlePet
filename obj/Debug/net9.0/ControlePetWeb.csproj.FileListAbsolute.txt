@@ -14,6 +14,7 @@ C:\ControlePetWeb\obj\Debug\net9.0\ControlePetWeb.csproj.CoreCompileInputs.cache
 C:\ControlePetWeb\obj\Debug\net9.0\ControlePetWeb.MvcApplicationPartsAssemblyInfo.cache
 C:\ControlePetWeb\obj\Debug\net9.0\ControlePetWeb.RazorAssemblyInfo.cache
 C:\ControlePetWeb\obj\Debug\net9.0\ControlePetWeb.RazorAssemblyInfo.cs
+C:\ControlePetWeb\obj\Debug\net9.0\ControlePetWeb.sourcelink.json
 C:\ControlePetWeb\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\ControlePetWeb\obj\Debug\net9.0\scopedcss\bundle\ControlePetWeb.styles.css
 C:\ControlePetWeb\obj\Debug\net9.0\scopedcss\projectbundle\ControlePetWeb.bundle.scp.css

@@ -19,6 +19,7 @@ namespace ControlePetWeb
                 app.UseHsts();
             }
 
+
             app.UseHttpsRedirection();
             app.UseRouting();
 
@@ -27,7 +28,7 @@ namespace ControlePetWeb
             app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
+                pattern: "{controller=Login}/{action=Index}/{id?}")
                 .WithStaticAssets();
 
             app.Run();

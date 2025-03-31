@@ -14,8 +14,15 @@
 
     <style>
         body {
-            background-color: rgb(56,59,67); /* Define o fundo preto */
-            color: white; /* Deixa o texto branco para contraste */
+            background-color: white; /* Fundo branco */
+            color: black; /* Cor do texto geral */
+        }
+
+        .card {
+            background-color: blue; /* Fundo azul para a div */
+            color: white; /* Texto branco para contraste */
+            border-radius: 20px; /* Deixa a div mais arredondada */
+            box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.5);
         }
 
         .emojione--dog-face {
@@ -28,17 +35,13 @@
         }
 
     </style>
-
-
 </head>
 <body class="d-flex align-items-center justify-content-center vh-100">
 
     <div class="card p-4 shadow-lg" style="width: 350px;">
         <h2 class="text-center">
-            <span class="emojione--dog-face"></span> <!-- Aqui você insere o ícone do cachorro -->
-            @* Login *@
+            <span class="emojione--dog-face"></span> <!-- Ícone do cachorro -->
         </h2>
-
 
         <form method="post">
             <div class="mb-3">

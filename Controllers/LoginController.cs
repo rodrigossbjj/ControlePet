@@ -1,7 +1,7 @@
 using ControlePetWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 
-public class HomeController : Controller
+public class LoginController : Controller
 {
     public IActionResult Index()
     {
@@ -13,7 +13,8 @@ public class HomeController : Controller
     {
         if (login.Usuario == "admin" && login.Senha == "1234")
         {
-            ViewBag.Mensagem = "Login bem-sucedido! Bem-vindo, " + login.Usuario + ".";
+            return RedirectToAction("Index", "PaginaInicial");
+            //ViewBag.Mensagem = "Login bem-sucedido! Bem-vindo, " + login.Usuario + ".";
         }
         else
         {
