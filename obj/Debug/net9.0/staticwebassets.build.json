@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "txI2X6fzHwh2xtKkuZopbr2+9cmetotnV287bKLhIIs=",
+  "Hash": "UfpWufSDP2v0qRvKP2KiRW6rOxfamO/+GO5rdasAUU0=",
   "Source": "ControlePetWeb",
   "BasePath": "_content/ControlePetWeb",
   "Mode": "Default",
@@ -689,6 +689,27 @@
       "OriginalItemSpec": "C:\\ControlePetWeb\\wwwroot\\js\\site.js"
     },
     {
+      "Identity": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\i4n16i4f2r-qq2uiqdqf1.gz",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "css/style2#[.{fingerprint=qq2uiqdqf1}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\ControlePetWeb\\wwwroot\\css\\style2.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "c1gacylbk3",
+      "Integrity": "sNPNy3b9BbUBqWRgUpO7AV1MEIPQBq6dg0gF9BJLt8U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\ControlePetWeb\\wwwroot\\css\\style2.css"
+    },
+    {
       "Identity": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\ijdj9nl0y8-dxx9fxp4il.gz",
       "SourceId": "ControlePetWeb",
       "SourceType": "Discovered",
@@ -813,6 +834,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\ControlePetWeb\\wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\lw182n9cmo-rnkmbldjvz.gz",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "css/styleCadastrar#[.{fingerprint=rnkmbldjvz}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\ControlePetWeb\\wwwroot\\css\\styleCadastrar.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "7kcyyytz5q",
+      "Integrity": "6dFByp5PeuvLG4BI0gJJw5J3MwoWQQnvU5BqKplIywU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\ControlePetWeb\\wwwroot\\css\\styleCadastrar.css"
     },
     {
       "Identity": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\m30qdgmozz-b9sayid5wm.gz",
@@ -1109,6 +1151,27 @@
       "OriginalItemSpec": "C:\\ControlePetWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
+      "Identity": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\s02b8txbj0-5nsg8bkzad.gz",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "js/script#[.{fingerprint=5nsg8bkzad}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\ControlePetWeb\\wwwroot\\js\\script.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "5rue1b0opn",
+      "Integrity": "z79Lup07bfaJIQGVWMez0L7HCPg4WUfHqeqk2kqjUo8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\ControlePetWeb\\wwwroot\\js\\script.js"
+    },
+    {
       "Identity": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\s5u9x8reni-erw9l3u2r3.gz",
       "SourceId": "ControlePetWeb",
       "SourceType": "Discovered",
@@ -1170,6 +1233,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\ControlePetWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\t3r1ps5glv-fbgso765al.gz",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "css/style#[.{fingerprint=fbgso765al}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\ControlePetWeb\\wwwroot\\css\\style.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "bq71olyytr",
+      "Integrity": "nfb64Z378qfaSzQr5Ns+Hh6U32KvS6iqkpY8/cdE2zA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\ControlePetWeb\\wwwroot\\css\\style.css"
     },
     {
       "Identity": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\tiqfwhzug2-mrlpezrjn3.gz",
@@ -1424,6 +1508,69 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\css\\style.css",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fbgso765al",
+      "Integrity": "m3WlUsr7zm1yBb2F8k49vH7DuKMsvbNj+J/YjXYr2i8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\css\\style2.css",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "css/style2#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qq2uiqdqf1",
+      "Integrity": "nkyvUslr/bPEFmq0WR14M2DqyrVDns8fSswBTBJHVI0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style2.css"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\css\\styleCadastrar.css",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "css/styleCadastrar#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rnkmbldjvz",
+      "Integrity": "FwGntFN7AIx4A/V6svy8JkLDMkWC6l4SNG6jnN39E5M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styleCadastrar.css"
+    },
+    {
       "Identity": "C:\\ControlePetWeb\\wwwroot\\favicon.ico",
       "SourceId": "ControlePetWeb",
       "SourceType": "Discovered",
@@ -1443,6 +1590,216 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\imagens\\banner.png",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "imagens/banner#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uzc4b2oyjy",
+      "Integrity": "yk3LBjhvzI0vQC2NXRqLQf34TESHMeUpMfcKOGp9Brg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\banner.png"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\imagens\\eye.jpeg",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "imagens/eye#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "spvviwijcx",
+      "Integrity": "UGQWjViLGeRg5JjzJ7slzK9j6+SGw7tX1kadXSV1GVg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\eye.jpeg"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\imagens\\foto-banner.jpg",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "imagens/foto-banner#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "do7s305gb5",
+      "Integrity": "3UhPaNtTfnUbckMZnYkJca1xEemKCJh6cP7e9QSzfyk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\foto-banner.jpg"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\imagens\\icon.jpeg",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "imagens/icon#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ekk7mls1ed",
+      "Integrity": "3q0ODF6t7P8gOyGX9LuWNGEemcNgAUQVbnkWIM3psOI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\icon.jpeg"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\imagens\\lock.jpeg",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "imagens/lock#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2rutj6772n",
+      "Integrity": "7jsX6l8uvqtK4ll6WCVtsomFKNM+yYxHBl8UgGI1keo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\lock.jpeg"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\imagens\\logo.png",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "imagens/logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cppmhnczz2",
+      "Integrity": "YOdk4zLUCmnR9Ha+Wael8TcwYk64ZsOuC/Tg4pzkNMs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\logo.png"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\imagens\\logo-remov.png",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "imagens/logo-remov#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dqm8qhlnls",
+      "Integrity": "FXOuXD6iH60C8YeGPAc/5roGrse2roGYUpb9RfkBJzQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\logo-remov.png"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\imagens\\pata.jpeg",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "imagens/pata#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i1w4d4qlha",
+      "Integrity": "yuf4HTQKtpvmnSvT0CGp2TlQKNdTLYXDJU0AfARuKvs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\pata.jpeg"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\imagens\\user.jpeg",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "imagens/user#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kxaj33295g",
+      "Integrity": "6BJy1BUqLl/RagX6IkWBT+esxHvuUFDEsWi0kbe0WDU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\user.jpeg"
+    },
+    {
+      "Identity": "C:\\ControlePetWeb\\wwwroot\\js\\script.js",
+      "SourceId": "ControlePetWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ControlePetWeb\\wwwroot\\",
+      "BasePath": "_content/ControlePetWeb",
+      "RelativePath": "js/script#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5nsg8bkzad",
+      "Integrity": "//bDoHo7qAO3CMzqwkYgTkIomkvs0ZBTU+SMxDxDIa0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\script.js"
     },
     {
       "Identity": "C:\\ControlePetWeb\\wwwroot\\js\\site.js",
@@ -3622,6 +3979,900 @@
       ]
     },
     {
+      "Route": "css/style.css",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\t3r1ps5glv-fbgso765al.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000750750751"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1331"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nfb64Z378qfaSzQr5Ns+Hh6U32KvS6iqkpY8/cdE2zA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 16:56:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"m3WlUsr7zm1yBb2F8k49vH7DuKMsvbNj+J/YjXYr2i8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m3WlUsr7zm1yBb2F8k49vH7DuKMsvbNj+J/YjXYr2i8="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4823"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m3WlUsr7zm1yBb2F8k49vH7DuKMsvbNj+J/YjXYr2i8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 16:56:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m3WlUsr7zm1yBb2F8k49vH7DuKMsvbNj+J/YjXYr2i8="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css.gz",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\t3r1ps5glv-fbgso765al.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1331"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nfb64Z378qfaSzQr5Ns+Hh6U32KvS6iqkpY8/cdE2zA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 16:56:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nfb64Z378qfaSzQr5Ns+Hh6U32KvS6iqkpY8/cdE2zA="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.fbgso765al.css",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\t3r1ps5glv-fbgso765al.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000750750751"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1331"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nfb64Z378qfaSzQr5Ns+Hh6U32KvS6iqkpY8/cdE2zA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 16:56:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"m3WlUsr7zm1yBb2F8k49vH7DuKMsvbNj+J/YjXYr2i8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fbgso765al"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m3WlUsr7zm1yBb2F8k49vH7DuKMsvbNj+J/YjXYr2i8="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.fbgso765al.css",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4823"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m3WlUsr7zm1yBb2F8k49vH7DuKMsvbNj+J/YjXYr2i8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 16:56:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fbgso765al"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m3WlUsr7zm1yBb2F8k49vH7DuKMsvbNj+J/YjXYr2i8="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.fbgso765al.css.gz",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\t3r1ps5glv-fbgso765al.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1331"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nfb64Z378qfaSzQr5Ns+Hh6U32KvS6iqkpY8/cdE2zA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 16:56:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fbgso765al"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nfb64Z378qfaSzQr5Ns+Hh6U32KvS6iqkpY8/cdE2zA="
+        }
+      ]
+    },
+    {
+      "Route": "css/style2.css",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\i4n16i4f2r-qq2uiqdqf1.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000417014178"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2397"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNPNy3b9BbUBqWRgUpO7AV1MEIPQBq6dg0gF9BJLt8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:51:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nkyvUslr/bPEFmq0WR14M2DqyrVDns8fSswBTBJHVI0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nkyvUslr/bPEFmq0WR14M2DqyrVDns8fSswBTBJHVI0="
+        }
+      ]
+    },
+    {
+      "Route": "css/style2.css",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\css\\style2.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11508"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nkyvUslr/bPEFmq0WR14M2DqyrVDns8fSswBTBJHVI0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:51:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nkyvUslr/bPEFmq0WR14M2DqyrVDns8fSswBTBJHVI0="
+        }
+      ]
+    },
+    {
+      "Route": "css/style2.css.gz",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\i4n16i4f2r-qq2uiqdqf1.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNPNy3b9BbUBqWRgUpO7AV1MEIPQBq6dg0gF9BJLt8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:51:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNPNy3b9BbUBqWRgUpO7AV1MEIPQBq6dg0gF9BJLt8U="
+        }
+      ]
+    },
+    {
+      "Route": "css/style2.qq2uiqdqf1.css",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\i4n16i4f2r-qq2uiqdqf1.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000417014178"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2397"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNPNy3b9BbUBqWRgUpO7AV1MEIPQBq6dg0gF9BJLt8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:51:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nkyvUslr/bPEFmq0WR14M2DqyrVDns8fSswBTBJHVI0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qq2uiqdqf1"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style2.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nkyvUslr/bPEFmq0WR14M2DqyrVDns8fSswBTBJHVI0="
+        }
+      ]
+    },
+    {
+      "Route": "css/style2.qq2uiqdqf1.css",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\css\\style2.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11508"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nkyvUslr/bPEFmq0WR14M2DqyrVDns8fSswBTBJHVI0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:51:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qq2uiqdqf1"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style2.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nkyvUslr/bPEFmq0WR14M2DqyrVDns8fSswBTBJHVI0="
+        }
+      ]
+    },
+    {
+      "Route": "css/style2.qq2uiqdqf1.css.gz",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\i4n16i4f2r-qq2uiqdqf1.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNPNy3b9BbUBqWRgUpO7AV1MEIPQBq6dg0gF9BJLt8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:51:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qq2uiqdqf1"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style2.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNPNy3b9BbUBqWRgUpO7AV1MEIPQBq6dg0gF9BJLt8U="
+        }
+      ]
+    },
+    {
+      "Route": "css/styleCadastrar.css",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\lw182n9cmo-rnkmbldjvz.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000939849624"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1063"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6dFByp5PeuvLG4BI0gJJw5J3MwoWQQnvU5BqKplIywU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:28:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"FwGntFN7AIx4A/V6svy8JkLDMkWC6l4SNG6jnN39E5M=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FwGntFN7AIx4A/V6svy8JkLDMkWC6l4SNG6jnN39E5M="
+        }
+      ]
+    },
+    {
+      "Route": "css/styleCadastrar.css",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\css\\styleCadastrar.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3283"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FwGntFN7AIx4A/V6svy8JkLDMkWC6l4SNG6jnN39E5M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:28:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FwGntFN7AIx4A/V6svy8JkLDMkWC6l4SNG6jnN39E5M="
+        }
+      ]
+    },
+    {
+      "Route": "css/styleCadastrar.css.gz",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\lw182n9cmo-rnkmbldjvz.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1063"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6dFByp5PeuvLG4BI0gJJw5J3MwoWQQnvU5BqKplIywU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:28:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6dFByp5PeuvLG4BI0gJJw5J3MwoWQQnvU5BqKplIywU="
+        }
+      ]
+    },
+    {
+      "Route": "css/styleCadastrar.rnkmbldjvz.css",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\lw182n9cmo-rnkmbldjvz.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000939849624"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1063"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6dFByp5PeuvLG4BI0gJJw5J3MwoWQQnvU5BqKplIywU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:28:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"FwGntFN7AIx4A/V6svy8JkLDMkWC6l4SNG6jnN39E5M=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rnkmbldjvz"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styleCadastrar.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FwGntFN7AIx4A/V6svy8JkLDMkWC6l4SNG6jnN39E5M="
+        }
+      ]
+    },
+    {
+      "Route": "css/styleCadastrar.rnkmbldjvz.css",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\css\\styleCadastrar.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3283"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FwGntFN7AIx4A/V6svy8JkLDMkWC6l4SNG6jnN39E5M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:28:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rnkmbldjvz"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styleCadastrar.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FwGntFN7AIx4A/V6svy8JkLDMkWC6l4SNG6jnN39E5M="
+        }
+      ]
+    },
+    {
+      "Route": "css/styleCadastrar.rnkmbldjvz.css.gz",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\lw182n9cmo-rnkmbldjvz.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1063"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6dFByp5PeuvLG4BI0gJJw5J3MwoWQQnvU5BqKplIywU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:28:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rnkmbldjvz"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styleCadastrar.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6dFByp5PeuvLG4BI0gJJw5J3MwoWQQnvU5BqKplIywU="
+        }
+      ]
+    },
+    {
       "Route": "favicon.61n19gt1b8.ico",
       "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\lj2z0cecdu-61n19gt1b8.gz",
       "Selectors": [
@@ -3916,6 +5167,1042 @@
         {
           "Name": "integrity",
           "Value": "sha256-jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/banner.png",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\banner.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "631850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yk3LBjhvzI0vQC2NXRqLQf34TESHMeUpMfcKOGp9Brg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 17:54:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yk3LBjhvzI0vQC2NXRqLQf34TESHMeUpMfcKOGp9Brg="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/banner.uzc4b2oyjy.png",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\banner.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "631850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yk3LBjhvzI0vQC2NXRqLQf34TESHMeUpMfcKOGp9Brg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 17:54:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uzc4b2oyjy"
+        },
+        {
+          "Name": "label",
+          "Value": "imagens/banner.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yk3LBjhvzI0vQC2NXRqLQf34TESHMeUpMfcKOGp9Brg="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/eye.jpeg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\eye.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UGQWjViLGeRg5JjzJ7slzK9j6+SGw7tX1kadXSV1GVg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 18:29:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UGQWjViLGeRg5JjzJ7slzK9j6+SGw7tX1kadXSV1GVg="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/eye.spvviwijcx.jpeg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\eye.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UGQWjViLGeRg5JjzJ7slzK9j6+SGw7tX1kadXSV1GVg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 18:29:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "spvviwijcx"
+        },
+        {
+          "Name": "label",
+          "Value": "imagens/eye.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UGQWjViLGeRg5JjzJ7slzK9j6+SGw7tX1kadXSV1GVg="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/foto-banner.do7s305gb5.jpg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\foto-banner.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81064"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3UhPaNtTfnUbckMZnYkJca1xEemKCJh6cP7e9QSzfyk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 17:39:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "do7s305gb5"
+        },
+        {
+          "Name": "label",
+          "Value": "imagens/foto-banner.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3UhPaNtTfnUbckMZnYkJca1xEemKCJh6cP7e9QSzfyk="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/foto-banner.jpg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\foto-banner.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81064"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3UhPaNtTfnUbckMZnYkJca1xEemKCJh6cP7e9QSzfyk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 17:39:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3UhPaNtTfnUbckMZnYkJca1xEemKCJh6cP7e9QSzfyk="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/icon.ekk7mls1ed.jpeg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\icon.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5298"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3q0ODF6t7P8gOyGX9LuWNGEemcNgAUQVbnkWIM3psOI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 18:29:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ekk7mls1ed"
+        },
+        {
+          "Name": "label",
+          "Value": "imagens/icon.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3q0ODF6t7P8gOyGX9LuWNGEemcNgAUQVbnkWIM3psOI="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/icon.jpeg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\icon.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5298"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3q0ODF6t7P8gOyGX9LuWNGEemcNgAUQVbnkWIM3psOI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 18:29:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3q0ODF6t7P8gOyGX9LuWNGEemcNgAUQVbnkWIM3psOI="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/lock.2rutj6772n.jpeg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\lock.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15945"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7jsX6l8uvqtK4ll6WCVtsomFKNM+yYxHBl8UgGI1keo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 18:29:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2rutj6772n"
+        },
+        {
+          "Name": "label",
+          "Value": "imagens/lock.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7jsX6l8uvqtK4ll6WCVtsomFKNM+yYxHBl8UgGI1keo="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/lock.jpeg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\lock.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15945"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7jsX6l8uvqtK4ll6WCVtsomFKNM+yYxHBl8UgGI1keo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 18:29:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7jsX6l8uvqtK4ll6WCVtsomFKNM+yYxHBl8UgGI1keo="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/logo.cppmhnczz2.png",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8428"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YOdk4zLUCmnR9Ha+Wael8TcwYk64ZsOuC/Tg4pzkNMs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 18:39:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cppmhnczz2"
+        },
+        {
+          "Name": "label",
+          "Value": "imagens/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YOdk4zLUCmnR9Ha+Wael8TcwYk64ZsOuC/Tg4pzkNMs="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/logo.png",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8428"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YOdk4zLUCmnR9Ha+Wael8TcwYk64ZsOuC/Tg4pzkNMs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 18:39:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YOdk4zLUCmnR9Ha+Wael8TcwYk64ZsOuC/Tg4pzkNMs="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/logo-remov.dqm8qhlnls.png",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\logo-remov.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FXOuXD6iH60C8YeGPAc/5roGrse2roGYUpb9RfkBJzQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 19:03:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dqm8qhlnls"
+        },
+        {
+          "Name": "label",
+          "Value": "imagens/logo-remov.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FXOuXD6iH60C8YeGPAc/5roGrse2roGYUpb9RfkBJzQ="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/logo-remov.png",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\logo-remov.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FXOuXD6iH60C8YeGPAc/5roGrse2roGYUpb9RfkBJzQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 13 Apr 2025 19:03:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FXOuXD6iH60C8YeGPAc/5roGrse2roGYUpb9RfkBJzQ="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/pata.i1w4d4qlha.jpeg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\pata.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30080"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yuf4HTQKtpvmnSvT0CGp2TlQKNdTLYXDJU0AfARuKvs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 18:29:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i1w4d4qlha"
+        },
+        {
+          "Name": "label",
+          "Value": "imagens/pata.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yuf4HTQKtpvmnSvT0CGp2TlQKNdTLYXDJU0AfARuKvs="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/pata.jpeg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\pata.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30080"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yuf4HTQKtpvmnSvT0CGp2TlQKNdTLYXDJU0AfARuKvs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 18:29:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yuf4HTQKtpvmnSvT0CGp2TlQKNdTLYXDJU0AfARuKvs="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/user.jpeg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\user.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19685"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6BJy1BUqLl/RagX6IkWBT+esxHvuUFDEsWi0kbe0WDU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 18:29:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6BJy1BUqLl/RagX6IkWBT+esxHvuUFDEsWi0kbe0WDU="
+        }
+      ]
+    },
+    {
+      "Route": "imagens/user.kxaj33295g.jpeg",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\imagens\\user.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19685"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6BJy1BUqLl/RagX6IkWBT+esxHvuUFDEsWi0kbe0WDU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 18:29:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kxaj33295g"
+        },
+        {
+          "Name": "label",
+          "Value": "imagens/user.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6BJy1BUqLl/RagX6IkWBT+esxHvuUFDEsWi0kbe0WDU="
+        }
+      ]
+    },
+    {
+      "Route": "js/script.5nsg8bkzad.js",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\s02b8txbj0-5nsg8bkzad.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000419463087"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2383"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z79Lup07bfaJIQGVWMez0L7HCPg4WUfHqeqk2kqjUo8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 17:42:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"//bDoHo7qAO3CMzqwkYgTkIomkvs0ZBTU+SMxDxDIa0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5nsg8bkzad"
+        },
+        {
+          "Name": "label",
+          "Value": "js/script.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-//bDoHo7qAO3CMzqwkYgTkIomkvs0ZBTU+SMxDxDIa0="
+        }
+      ]
+    },
+    {
+      "Route": "js/script.5nsg8bkzad.js",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\js\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12431"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"//bDoHo7qAO3CMzqwkYgTkIomkvs0ZBTU+SMxDxDIa0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 17:42:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5nsg8bkzad"
+        },
+        {
+          "Name": "label",
+          "Value": "js/script.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-//bDoHo7qAO3CMzqwkYgTkIomkvs0ZBTU+SMxDxDIa0="
+        }
+      ]
+    },
+    {
+      "Route": "js/script.5nsg8bkzad.js.gz",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\s02b8txbj0-5nsg8bkzad.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2383"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z79Lup07bfaJIQGVWMez0L7HCPg4WUfHqeqk2kqjUo8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 17:42:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5nsg8bkzad"
+        },
+        {
+          "Name": "label",
+          "Value": "js/script.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z79Lup07bfaJIQGVWMez0L7HCPg4WUfHqeqk2kqjUo8="
+        }
+      ]
+    },
+    {
+      "Route": "js/script.js",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\s02b8txbj0-5nsg8bkzad.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000419463087"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2383"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z79Lup07bfaJIQGVWMez0L7HCPg4WUfHqeqk2kqjUo8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 17:42:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"//bDoHo7qAO3CMzqwkYgTkIomkvs0ZBTU+SMxDxDIa0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-//bDoHo7qAO3CMzqwkYgTkIomkvs0ZBTU+SMxDxDIa0="
+        }
+      ]
+    },
+    {
+      "Route": "js/script.js",
+      "AssetFile": "C:\\ControlePetWeb\\wwwroot\\js\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12431"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"//bDoHo7qAO3CMzqwkYgTkIomkvs0ZBTU+SMxDxDIa0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 17:42:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-//bDoHo7qAO3CMzqwkYgTkIomkvs0ZBTU+SMxDxDIa0="
+        }
+      ]
+    },
+    {
+      "Route": "js/script.js.gz",
+      "AssetFile": "C:\\ControlePetWeb\\obj\\Debug\\net9.0\\compressed\\s02b8txbj0-5nsg8bkzad.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2383"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z79Lup07bfaJIQGVWMez0L7HCPg4WUfHqeqk2kqjUo8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 17:42:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z79Lup07bfaJIQGVWMez0L7HCPg4WUfHqeqk2kqjUo8="
         }
       ]
     },
@@ -7314,7 +9601,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 17:30:00 GMT"
+          "Value": "Tue, 29 Apr 2025 17:11:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7375,7 +9662,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 17:30:00 GMT"
+          "Value": "Tue, 29 Apr 2025 17:11:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7420,7 +9707,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 17:30:00 GMT"
+          "Value": "Tue, 29 Apr 2025 17:11:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7520,7 +9807,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 17:30:00 GMT"
+          "Value": "Tue, 29 Apr 2025 17:11:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7573,7 +9860,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 17:30:00 GMT"
+          "Value": "Tue, 29 Apr 2025 17:11:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7610,7 +9897,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 17:30:00 GMT"
+          "Value": "Tue, 29 Apr 2025 17:11:19 GMT"
         },
         {
           "Name": "Cache-Control",

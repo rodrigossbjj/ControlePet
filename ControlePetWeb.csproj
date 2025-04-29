@@ -6,4 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\imagens\banner.png" />
+    <None Include="wwwroot\imagens\eye.jpeg" />
+    <None Include="wwwroot\imagens\foto-banner.jpg" />
+    <None Include="wwwroot\imagens\icon.jpeg" />
+    <None Include="wwwroot\imagens\lock.jpeg" />
+    <None Include="wwwroot\imagens\logo-remov.png" />
+    <None Include="wwwroot\imagens\logo.png" />
+    <None Include="wwwroot\imagens\pata.jpeg" />
+    <None Include="wwwroot\imagens\user.jpeg" />
+  </ItemGroup>
+
 </Project>

@@ -9,8 +9,60 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\css\\style2.css",
+      "PackagePath": "staticwebassets\\css\\style2.css"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\css\\styleCadastrar.css",
+      "PackagePath": "staticwebassets\\css\\styleCadastrar.css"
+    },
+    {
       "Id": "C:\\ControlePetWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\imagens\\banner.png",
+      "PackagePath": "staticwebassets\\imagens\\banner.png"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\imagens\\eye.jpeg",
+      "PackagePath": "staticwebassets\\imagens\\eye.jpeg"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\imagens\\foto-banner.jpg",
+      "PackagePath": "staticwebassets\\imagens\\foto-banner.jpg"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\imagens\\icon.jpeg",
+      "PackagePath": "staticwebassets\\imagens\\icon.jpeg"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\imagens\\lock.jpeg",
+      "PackagePath": "staticwebassets\\imagens\\lock.jpeg"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\imagens\\logo-remov.png",
+      "PackagePath": "staticwebassets\\imagens\\logo-remov.png"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\imagens\\logo.png",
+      "PackagePath": "staticwebassets\\imagens\\logo.png"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\imagens\\pata.jpeg",
+      "PackagePath": "staticwebassets\\imagens\\pata.jpeg"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\imagens\\user.jpeg",
+      "PackagePath": "staticwebassets\\imagens\\user.jpeg"
+    },
+    {
+      "Id": "C:\\ControlePetWeb\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
       "Id": "C:\\ControlePetWeb\\wwwroot\\js\\site.js",

@@ -2,5 +2,53 @@
     ViewData["Title"] = "Página Inicial";
 }
 
-<h1>Bem-vindo à Página Inicial!</h1>
-<p>Login realizado com sucesso.</p>
+@{
+    Layout = null;
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <div class="cabecalho-esquerda">
+        <div class="logo">
+            <img src="~/imagens/logo-remov.png" alt="Logo MeuPET">
+        </div>
+        <h1>CuidaPet</h1>
+    </div>
+    <div class="atalhos-topo">
+        <a asp-controller="Login" asp-action="Index" class="botao-cabecalho">Login</a>
+        <a asp-controller="Cadastro" asp-action="Index" class="botao-cabecalho">Cadastrar</a>
+    </div>
+</header>
+
+<main>
+    <section class="conteudo-esquerdo">
+        <h2>Facilidade para gerenciar seu negócio</h2>
+        <p>
+            Gerencie todos os aspectos do cuidado com os animais de estimação<br>
+            de seus clientes em uma única plataforma integrada e fácil de usar.
+        </p>
+        <p class="texto-parede">Junte-se a milhares de clínicas veterinárias</p>
+    </section>
+
+    @* <section class="area-login">
+        <h2>Entrar</h2>
+        <form id="formLogin" action="outra-tela.html" method="POST">
+            <div class="grupo-campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <button type="submit" class="botao-login">Entrar</button>
+
+            <div class="links-login">
+                <a href="#">Esqueceu a senha?</a> •
+                <a href="#">Criar conta</a>
+            </div>
+        </form>
+    </section> *@
+</main>

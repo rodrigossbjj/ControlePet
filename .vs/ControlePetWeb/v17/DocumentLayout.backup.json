@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\ControlePetWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\views\\cadastro\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:views\\cadastro\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\views\\paginainicial\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:views\\paginainicial\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\controllers\\paginainicialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:controllers\\paginainicialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,60 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ControlePetWeb\\Views\\Cadastro\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cadastro\\Index.cshtml",
+              "ToolTip": "C:\\ControlePetWeb\\Views\\Cadastro\\Index.cshtml*",
+              "RelativeToolTip": "Views\\Cadastro\\Index.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T17:47:52.393Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\ControlePetWeb\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\ControlePetWeb\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:30:24.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\ControlePetWeb\\Views\\PaginaInicial\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\PaginaInicial\\Index.cshtml",
               "ToolTip": "C:\\ControlePetWeb\\Views\\PaginaInicial\\Index.cshtml",
               "RelativeToolTip": "Views\\PaginaInicial\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBEAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T14:21:59.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PaginaInicialController.cs",
-              "DocumentMoniker": "C:\\ControlePetWeb\\Controllers\\PaginaInicialController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PaginaInicialController.cs",
-              "ToolTip": "C:\\ControlePetWeb\\Controllers\\PaginaInicialController.cs",
-              "RelativeToolTip": "Controllers\\PaginaInicialController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:18:49.65Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\ControlePetWeb\\Views\\Login\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Login\\Index.cshtml",
-              "ToolTip": "C:\\ControlePetWeb\\Views\\Login\\Index.cshtml",
-              "RelativeToolTip": "Views\\Login\\Index.cshtml",
-              "ViewState": "AgIAAFcAAAAAAAAAAADwv2wAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-13T17:40:03.3Z",
+              "WhenOpened": "2025-04-29T17:34:05.341Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\ControlePetWeb\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\ControlePetWeb\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAQAAACgmZmZmZklwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T17:32:49.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         },

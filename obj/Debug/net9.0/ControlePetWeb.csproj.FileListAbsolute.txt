@@ -24,7 +24,6 @@ C:\ControlePetWeb\obj\Debug\net9.0\compressed\hklr32v90q-xtxxf3hu2r.gz
 C:\ControlePetWeb\obj\Debug\net9.0\compressed\gdjz3yfcq0-bqjiyaj88i.gz
 C:\ControlePetWeb\obj\Debug\net9.0\compressed\fkybzyh0b3-c2jlpeoesf.gz
 C:\ControlePetWeb\obj\Debug\net9.0\compressed\s5u9x8reni-erw9l3u2r3.gz
-C:\ControlePetWeb\obj\Debug\net9.0\compressed\96ajom3j7j-aexeepp0ev.gz
 C:\ControlePetWeb\obj\Debug\net9.0\compressed\e7d5f4dy7t-d7shbmvgxk.gz
 C:\ControlePetWeb\obj\Debug\net9.0\compressed\4177mzvshb-ausgxo2sd3.gz
 C:\ControlePetWeb\obj\Debug\net9.0\compressed\7irtdtsn9n-k8d9w2qqmf.gz
@@ -97,3 +96,8 @@ C:\ControlePetWeb\obj\Debug\net9.0\refint\ControlePetWeb.dll
 C:\ControlePetWeb\obj\Debug\net9.0\ControlePetWeb.pdb
 C:\ControlePetWeb\obj\Debug\net9.0\ControlePetWeb.genruntimeconfig.cache
 C:\ControlePetWeb\obj\Debug\net9.0\ref\ControlePetWeb.dll
+C:\ControlePetWeb\obj\Debug\net9.0\compressed\i4n16i4f2r-qq2uiqdqf1.gz
+C:\ControlePetWeb\obj\Debug\net9.0\compressed\lw182n9cmo-rnkmbldjvz.gz
+C:\ControlePetWeb\obj\Debug\net9.0\compressed\s02b8txbj0-5nsg8bkzad.gz
+C:\ControlePetWeb\obj\Debug\net9.0\compressed\t3r1ps5glv-fbgso765al.gz
+C:\ControlePetWeb\obj\Debug\net9.0\compressed\96ajom3j7j-aexeepp0ev.gz

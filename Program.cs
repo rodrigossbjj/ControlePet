@@ -28,7 +28,7 @@ namespace ControlePetWeb
             app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Login}/{action=Index}/{id?}")
+                pattern: "{controller=PaginaInicial}/{action=Index}/{id?}")
                 .WithStaticAssets();
 
             app.Run();

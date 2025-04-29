@@ -6,6 +6,9 @@ namespace ControlePetWeb.Controllers
     {
         public IActionResult Index()
         {
+
+            //if ( 1==1 )return RedirectToAction("Index", "Login");
+
             return View();
         }
     }
