@@ -1,0 +1,770 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+@{
+    Layout = null;
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/style2.css" />
+    <div class="cabecalho-esquerda">
+        <div class="logo">
+            <img src="~/imagens/logo-remov.png" alt="Logo VetBase">
+        </div>
+        <h1>CuidaPet</h1>
+    </div>
+</header>
+
+<div class="container-principal">
+   
+    <div class="painel-conteudo">
+       
+        <div class="painel-acoes">
+            <h2><i class="fas fa-file-alt"></i> Cadastros</h2>
+            <div class="botoes-acao">
+                <button class="botao-acao" onclick="showPetForm('novo')">
+                    <i class="fas fa-plus"></i>
+                    <span>Cadastrar Pet</span>
+                </button>
+                <button class="botao-acao" onclick="showTutorForm('novo')">
+                    <i class="fas fa-plus"></i>
+                    <span>Cadastrar Tutor</span>
+                </button>
+            </div>
+
+            <h2><i class="fas fa-edit"></i> Gerenciamento</h2>
+            <div class="botoes-acao">
+                <button class="botao-acao" onclick="showPetSelection()">
+                    <i class="fas fa-pen"></i>
+                    <span>Alterar Pet</span>
+                </button>
+                <button class="botao-acao" onclick="showTutorSelection()">
+                    <i class="fas fa-pen"></i>
+                    <span>Alterar Tutor</span>
+                </button>
+            </div>
+
+            <h2><i class="fas fa-calendar-check"></i> Consultas</h2>
+            <div class="botoes-acao">
+                <button class="botao-acao" onclick="showAppointmentForm()">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Marcar Consulta</span>
+                </button>
+                <button class="botao-acao" onclick="showMedicalHistory()">
+                    <i class="fas fa-file-medical"></i>
+                    <span>Histórico do Pet</span>
+                </button>
+            </div>
+        </div>
+
+        
+        <div class="painel-direito">
+            
+            <div id="seletor-pet" class="container-seletor" style="display:none;">
+                <h3><i class="fas fa-search"></i> Selecione um Pet</h3>
+                <select class="seletor-form" id="lista-pets">
+                    <option value="">-- Selecione --</option>
+                    <option value="1">Totó (Labrador - João Silva)</option>
+                    <option value="2">Mingau (Persa - Maria Souza)</option>
+                    <option value="3">Rex (Pastor Alemão - Carlos Oliveira)</option>
+                </select>
+                <button class="botao-confirmar" onclick="loadPetData()">Carregar</button>
+            </div>
+
+            
+            <div id="form-consulta" class="container-formulario" style="display:none;">
+                <h3><i class="fas fa-calendar-plus"></i> Marcar Consulta</h3>
+                <div class="grupo-formulario">
+                    <label>Pet:</label>
+                    <select class="seletor-form" id="pet-consulta">
+                        <option value="">-- Selecione --</option>
+                        <option value="1">Totó (Labrador)</option>
+                        <option value="2">Mingau (Persa)</option>
+                        <option value="3">Rex (Pastor Alemão)</option>
+                    </select>
+                </div>
+                <div class="grupo-formulario">
+                    <label>Tipo de Consulta:</label>
+                    <select class="seletor-form" id="tipo-consulta">
+                        <option value="rotina">Rotina</option>
+                        <option value="vacina">Vacinação</option>
+                        <option value="emergencia">Emergência</option>
+                        <option value="cirurgia">Cirurgia</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="grupo-formulario">
+                    <label>Data e Hora:</label>
+                    <input type="datetime-local" class="input-formulario" id="data-consulta">
+                </div>
+                <div class="grupo-formulario">
+                    <label>Observações:</label>
+                    <textarea class="textarea-formulario" id="observacoes-consulta"></textarea>
+                </div>
+                <button class="botao-confirmar">Agendar</button>
+            </div>
+
+            
+            <div id="informacoes-pet" class="container-informacoes">
+                <div class="placeholder">
+                    <i class="fas fa-paw"></i>
+                    <p>Selecione um pet para visualizar ou editar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <section class="secao-agenda">
+        <h2><i class="fas fa-calendar-day"></i> Agenda</h2>
+        <p>Próximas consultas agendadas</p>
+        <div class="lista-consultas">
+            <div class="cartao-consulta">
+                <div class="cabecalho-consulta">
+                    <span class="nome-pet">Totó</span>
+                    <span class="tipo-consulta vacina">Vacinação</span>
+                </div>
+                <div class="detalhes-consulta">
+                    <span><i class="fas fa-calendar-alt"></i> 22/04/2023 - 14:30</span>
+                    <span><i class="fas fa-user"></i> Dr. Silva</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+@* <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Dados de exemplo com estrutura completa
+        const petsData = {
+            '1': {
+                id: 1,
+                nome: 'Totó',
+                especie: 'Cachorro',
+                raca: 'Labrador Retriever',
+                idade: '5 anos',
+                peso: '28 kg',
+                cor: 'Dourado',
+                doencas: 'Nenhuma',
+                alergias: 'Nenhuma',
+                foto: 'https://images.unsplash.com/photo-1561037404-61cd46aa615b',
+                tutor: {
+                    id: 1,
+                    nome: 'João Silva',
+                    cpf: '123.456.789-00',
+                    telefone: '(11) 98765-4321',
+                    email: 'joao.silva@email.com',
+                    endereco: 'Rua das Flores, 123 - São Paulo/SP',
+                    cep: '01234-567'
+                },
+                historico: [
+                    {
+                        id: 1,
+                        data: '15/04/2023',
+                        tipo: 'Rotina',
+                        descricao: 'Consulta de rotina anual',
+                        detalhes: 'Check-up completo, vacinas em dia, peso ideal',
+                        veterinario: 'Dra. Ana Oliveira',
+                        medicamentos: 'Nenhum'
+                    },
+                    {
+                        id: 2,
+                        data: '10/03/2023',
+                        tipo: 'Vacinação',
+                        descricao: 'Vacinação anual',
+                        detalhes: 'Aplicadas vacinas antirrábica e V10',
+                        veterinario: 'Dr. Carlos Mendes',
+                        medicamentos: 'Vacina V10'
+                    }
+                ]
+            },
+            '2': {
+                id: 2,
+                nome: 'Mingau',
+                especie: 'Gato',
+                raca: 'Persa',
+                idade: '3 anos',
+                peso: '4.2 kg',
+                cor: 'Branco',
+                doencas: 'Problemas renais leves',
+                alergias: 'Nenhuma',
+                foto: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba',
+                tutor: {
+                    id: 2,
+                    nome: 'Maria Souza',
+                    cpf: '987.654.321-00',
+                    telefone: '(11) 91234-5678',
+                    email: 'maria.souza@email.com',
+                    endereco: 'Av. Paulista, 1000 - São Paulo/SP',
+                    cep: '04567-890'
+                },
+                historico: [
+                    {
+                        id: 3,
+                        data: '12/04/2023',
+                        tipo: 'Rotina',
+                        descricao: 'Acompanhamento renal',
+                        detalhes: 'Exames de sangue realizados, dieta ajustada',
+                        veterinario: 'Dra. Fernanda Costa',
+                        medicamentos: 'Renalgin'
+                    }
+                ]
+            }
+        };
+
+        // Elementos da interface
+        const UI = {
+            elements: {
+                seletorPet: document.getElementById('seletor-pet'),
+                listaPets: document.getElementById('lista-pets'),
+                formConsulta: document.getElementById('form-consulta'),
+                infoPet: document.getElementById('informacoes-pet'),
+                petConsulta: document.getElementById('pet-consulta'),
+                tipoConsulta: document.getElementById('tipo-consulta'),
+                dataConsulta: document.getElementById('data-consulta'),
+                obsConsulta: document.getElementById('observacoes-consulta')
+            },
+
+            // Mostrar seletor de pets
+            showPetSelection: function() {
+                this.hideAllPanels();
+                this.elements.seletorPet.style.display = 'block';
+                this.showPlaceholder('Selecione um pet para visualizar ou editar');
+            },
+
+            // Carregar dados do pet selecionado
+            loadPetData: function() {
+                const petId = this.elements.listaPets.value;
+                if (!petId) {
+                    this.showNotification('Selecione um pet primeiro', 'warning');
+                    return;
+                }
+
+                const pet = petsData[petId];
+                this.renderPetProfile(pet);
+                this.elements.seletorPet.style.display = 'none';
+            },
+
+            // Renderizar perfil completo do pet
+            renderPetProfile: function(pet) {
+                const historicoHTML = pet.historico.map(item => `
+                    <div class="historico-item">
+                        <div class="historico-header">
+                            <span class="historico-data">${item.data}</span>
+                            <span class="historico-tipo ${this.getTipoClass(item.tipo)}">${item.tipo}</span>
+                        </div>
+                        <div class="historico-content">
+                            <h4>${item.descricao}</h4>
+                            <p class="historico-detalhes">${item.detalhes}</p>
+                            <div class="historico-footer">
+                                <span class="veterinario">
+                                    <i class="fas fa-user-md"></i> ${item.veterinario}
+                                </span>
+                                ${item.medicamentos ? `
+                                <span class="medicamentos">
+                                    <i class="fas fa-pills"></i> ${item.medicamentos}
+                                </span>
+                                ` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                this.elements.infoPet.innerHTML = `
+                    <div class="pet-profile">
+                        <!-- Cabeçalho com informações básicas -->
+                        <div class="pet-header">
+                            <div class="pet-avatar" style="background-image: url('${pet.foto}')"></div>
+                            <div class="pet-info">
+                                <h2>${pet.nome}</h2>
+                                <div class="pet-meta">
+                                    <span><i class="fas fa-paw"></i> ${pet.raca}</span>
+                                    <span><i class="fas fa-birthday-cake"></i> ${pet.idade}</span>
+                                    <span><i class="fas fa-weight-hanging"></i> ${pet.peso}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Abas de navegação -->
+                        <div class="pet-tabs">
+                            <button class="tab-btn active" data-tab="info"><i class="fas fa-info-circle"></i> Informações</button>
+                            <button class="tab-btn" data-tab="saude"><i class="fas fa-heartbeat"></i> Saúde</button>
+                            <button class="tab-btn" data-tab="historico"><i class="fas fa-file-medical-alt"></i> Histórico</button>
+                            <button class="tab-btn" data-tab="tutor"><i class="fas fa-user"></i> Tutor</button>
+                        </div>
+
+                        <!-- Conteúdo das abas -->
+                        <div class="tab-content active" id="info-tab">
+                            <div class="info-grid">
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-dog"></i>
+                                    </div>
+                                    <div class="info-text">
+                                        <h4>Espécie</h4>
+                                        <p>${pet.especie}</p>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-dna"></i>
+                                    </div>
+                                    <div class="info-text">
+                                        <h4>Raça</h4>
+                                        <p>${pet.raca}</p>
+                                    </div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-palette"></i>
+                                    </div>
+                                    <div class="info-text">
+                                        <h4>Cor</h4>
+                                        <p>${pet.cor}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="saude-tab">
+                            <div class="health-grid">
+                                <div class="health-card ${pet.doencas === 'Nenhuma' ? 'healthy' : 'warning'}">
+                                    <div class="health-icon">
+                                        <i class="fas fa-${pet.doencas === 'Nenhuma' ? 'check-circle' : 'exclamation-triangle'}"></i>
+                                    </div>
+                                    <div class="health-text">
+                                        <h4>Doenças</h4>
+                                        <p>${pet.doencas}</p>
+                                    </div>
+                                </div>
+                                <div class="health-card ${pet.alergias === 'Nenhuma' ? 'healthy' : 'warning'}">
+                                    <div class="health-icon">
+                                        <i class="fas fa-allergies"></i>
+                                    </div>
+                                    <div class="health-text">
+                                        <h4>Alergias</h4>
+                                        <p>${pet.alergias}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="historico-tab">
+                            <div class="timeline">
+                                ${historicoHTML}
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="tutor-tab">
+                            <div class="tutor-profile">
+                                <div class="tutor-header">
+                                    <div class="tutor-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <h3>${pet.tutor.nome}</h3>
+                                </div>
+                                <div class="tutor-info">
+                                    <div class="info-row">
+                                        <span class="info-label"><i class="fas fa-id-card"></i> CPF:</span>
+                                        <span>${pet.tutor.cpf}</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label"><i class="fas fa-phone"></i> Telefone:</span>
+                                        <span>${pet.tutor.telefone}</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label"><i class="fas fa-envelope"></i> E-mail:</span>
+                                        <span>${pet.tutor.email}</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label"><i class="fas fa-map-marker-alt"></i> Endereço:</span>
+                                        <span>${pet.tutor.endereco}</span>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-label"><i class="fas fa-mail-bulk"></i> CEP:</span>
+                                        <span>${pet.tutor.cep}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ações -->
+                        <div class="pet-actions">
+                            <button class="botao-acao" onclick="UI.showPetForm('editar')">
+                                <i class="fas fa-edit"></i> Editar Pet
+                            </button>
+                            <button class="botao-acao" onclick="UI.showTutorForm('editar')">
+                                <i class="fas fa-user-edit"></i> Editar Tutor
+                            </button>
+                            <button class="botao-acao" onclick="UI.showAppointmentForm()">
+                                <i class="fas fa-calendar-plus"></i> Nova Consulta
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                // Configurar eventos das abas
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // Remover classe active de todos os botões e conteúdos
+                        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+                        // Adicionar classe active ao botão clicado
+                        btn.classList.add('active');
+
+                        // Mostrar o conteúdo correspondente
+                        const tabId = btn.getAttribute('data-tab') + '-tab';
+                        document.getElementById(tabId).classList.add('active');
+                    });
+                });
+            },
+
+            // Mostrar formulário de pet
+            showPetForm: function(mode) {
+                this.hideAllPanels();
+
+                let pet = {};
+                if (mode === 'editar') {
+                    const petId = this.elements.listaPets.value;
+                    if (!petId) {
+                        this.showNotification('Selecione um pet para editar primeiro', 'warning');
+                        this.showPetSelection();
+                        return;
+                    }
+                    pet = petsData[petId];
+                }
+
+                this.elements.infoPet.innerHTML = `
+                    <div class="form-container">
+                        <h3><i class="fas fa-${mode === 'novo' ? 'plus' : 'edit'}"></i> ${mode === 'novo' ? 'Cadastrar Novo Pet' : 'Editar Pet'}</h3>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="pet-nome">Nome do Pet</label>
+                                <input type="text" id="pet-nome" value="${pet.nome || ''}" placeholder="Ex: Totó">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pet-especie">Espécie</label>
+                                <select id="pet-especie">
+                                    <option value="Cachorro" ${pet.especie === 'Cachorro' ? 'selected' : ''}>Cachorro</option>
+                                    <option value="Gato" ${pet.especie === 'Gato' ? 'selected' : ''}>Gato</option>
+                                    <option value="Outro" ${!['Cachorro', 'Gato'].includes(pet.especie) ? 'selected' : ''}>Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pet-raca">Raça</label>
+                                <input type="text" id="pet-raca" value="${pet.raca || ''}" placeholder="Ex: Labrador">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pet-idade">Idade</label>
+                                <input type="text" id="pet-idade" value="${pet.idade || ''}" placeholder="Ex: 2 anos">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pet-peso">Peso (kg)</label>
+                                <input type="text" id="pet-peso" value="${pet.peso ? pet.peso.replace(' kg', '') : ''}" placeholder="Ex: 5.2">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pet-cor">Cor</label>
+                                <input type="text" id="pet-cor" value="${pet.cor || ''}" placeholder="Ex: Branco">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="pet-foto">URL da Foto</label>
+                                <input type="text" id="pet-foto" value="${pet.foto || ''}" placeholder="Cole a URL da imagem do pet">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="pet-doencas">Doenças/Problemas de Saúde</label>
+                                <input type="text" id="pet-doencas" value="${pet.doencas || ''}" placeholder="Descreva qualquer problema de saúde">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="pet-alergias">Alergias</label>
+                                <input type="text" id="pet-alergias" value="${pet.alergias || ''}" placeholder="Liste as alergias conhecidas">
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button class="botao-acao" onclick="UI.showPetSelection()">
+                                <i class="fas fa-times"></i> Cancelar
+                            </button>
+                            <button class="botao-confirmar" onclick="UI.savePet('${mode}')">
+                                <i class="fas fa-save"></i> Salvar
+                            </button>
+                        </div>
+                    </div>
+                `;
+            },
+
+            // Mostrar formulário de tutor
+            showTutorForm: function(mode) {
+                this.hideAllPanels();
+
+                let tutor = {};
+                if (mode === 'editar') {
+                    const petId = this.elements.listaPets.value;
+                    if (!petId) {
+                        this.showNotification('Selecione um pet para editar o tutor primeiro', 'warning');
+                        this.showPetSelection();
+                        return;
+                    }
+                    tutor = petsData[petId].tutor;
+                }
+
+                this.elements.infoPet.innerHTML = `
+                    <div class="form-container">
+                        <h3><i class="fas fa-${mode === 'novo' ? 'plus' : 'edit'}"></i> ${mode === 'novo' ? 'Cadastrar Novo Tutor' : 'Editar Tutor'}</h3>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="tutor-nome">Nome Completo</label>
+                                <input type="text" id="tutor-nome" value="${tutor.nome || ''}" placeholder="Ex: João Silva">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tutor-cpf">CPF</label>
+                                <input type="text" id="tutor-cpf" value="${tutor.cpf || ''}" placeholder="000.000.000-00">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tutor-telefone">Telefone</label>
+                                <input type="tel" id="tutor-telefone" value="${tutor.telefone || ''}" placeholder="(00) 00000-0000">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tutor-email">E-mail</label>
+                                <input type="email" id="tutor-email" value="${tutor.email || ''}" placeholder="exemplo@email.com">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="tutor-endereco">Endereço</label>
+                                <input type="text" id="tutor-endereco" value="${tutor.endereco || ''}" placeholder="Rua, número - Bairro - Cidade/UF">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tutor-cep">CEP</label>
+                                <input type="text" id="tutor-cep" value="${tutor.cep || ''}" placeholder="00000-000">
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button class="botao-acao" onclick="UI.showPetSelection()">
+                                <i class="fas fa-times"></i> Cancelar
+                            </button>
+                            <button class="botao-confirmar" onclick="UI.saveTutor('${mode}')">
+                                <i class="fas fa-save"></i> Salvar
+                            </button>
+                        </div>
+                    </div>
+                `;
+            },
+
+            // Mostrar formulário de consulta
+            showAppointmentForm: function() {
+                this.hideAllPanels();
+                this.elements.formConsulta.style.display = 'block';
+            },
+
+            // Mostrar placeholder
+            showPlaceholder: function(message) {
+                this.elements.infoPet.innerHTML = `
+                    <div class="placeholder">
+                        <i class="fas fa-paw"></i>
+                        <p>${message}</p>
+                    </div>
+                `;
+            },
+
+            // Mostrar notificação
+            showNotification: function(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                notification.innerHTML = `
+                    <div class="notification-content">
+                        <i class="fas fa-${
+                            type === 'error' ? 'exclamation-circle' :
+                            type === 'success' ? 'check-circle' :
+                            type === 'warning' ? 'exclamation-triangle' : 'info-circle'
+                        }"></i>
+                        <span>${message}</span>
+                    </div>
+                    <button class="notification-close" onclick="this.parentElement.remove()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                `;
+
+                document.body.appendChild(notification);
+                setTimeout(() => notification.remove(), 5000);
+            },
+
+            // Obter classe CSS para tipo de consulta
+            getTipoClass: function(tipo) {
+                const tipos = {
+                    'Rotina': 'rotina',
+                    'Vacinação': 'vacina',
+                    'Emergência': 'emergencia',
+                    'Cirurgia': 'cirurgia'
+                };
+                return tipos[tipo] || '';
+            },
+
+            // Esconder todos os painéis
+            hideAllPanels: function() {
+                this.elements.seletorPet.style.display = 'none';
+                this.elements.formConsulta.style.display = 'none';
+            },
+
+            // Salvar pet (simulação)
+            savePet: function(mode) {
+                const petData = {
+                    nome: document.getElementById('pet-nome').value.trim(),
+                    especie: document.getElementById('pet-especie').value,
+                    raca: document.getElementById('pet-raca').value.trim(),
+                    idade: document.getElementById('pet-idade').value.trim(),
+                    peso: document.getElementById('pet-peso').value.trim() + ' kg',
+                    cor: document.getElementById('pet-cor').value.trim(),
+                    foto: document.getElementById('pet-foto').value.trim(),
+                    doencas: document.getElementById('pet-doencas').value.trim(),
+                    alergias: document.getElementById('pet-alergias').value.trim()
+                };
+
+                if (!petData.nome || !petData.especie) {
+                    this.showNotification('Preencha os campos obrigatórios', 'warning');
+                    return;
+                }
+
+                // Simular salvamento
+                setTimeout(() => {
+                    this.showNotification(`Pet ${mode === 'novo' ? 'cadastrado' : 'atualizado'} com sucesso!`, 'success');
+
+                    // Atualizar a visualização (simulação)
+                    const petSalvo = {
+                        ...petData,
+                        tutor: petsData['1'].tutor, // Simulação
+                        historico: []
+                    };
+
+                    this.renderPetProfile(petSalvo);
+                }, 1000);
+            },
+
+            // Salvar tutor (simulação)
+            saveTutor: function(mode) {
+                const tutorData = {
+                    nome: document.getElementById('tutor-nome').value.trim(),
+                    cpf: document.getElementById('tutor-cpf').value.trim(),
+                    telefone: document.getElementById('tutor-telefone').value.trim(),
+                    email: document.getElementById('tutor-email').value.trim(),
+                    endereco: document.getElementById('tutor-endereco').value.trim(),
+                    cep: document.getElementById('tutor-cep').value.trim()
+                };
+
+                if (!tutorData.nome || !tutorData.cpf || !tutorData.telefone) {
+                    this.showNotification('Preencha os campos obrigatórios', 'warning');
+                    return;
+                }
+
+                // Simular salvamento
+                setTimeout(() => {
+                    this.showNotification(`Tutor ${mode === 'novo' ? 'cadastrado' : 'atualizado'} com sucesso!`, 'success');
+
+                    // Mostrar os dados salvos
+                    this.elements.infoPet.innerHTML = `
+                        <div class="tutor-saved">
+                            <div class="saved-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Tutor ${mode === 'novo' ? 'cadastrado' : 'atualizado'} com sucesso!</h3>
+                            <div class="tutor-info">
+                                <p><strong>Nome:</strong> ${tutorData.nome}</p>
+                                <p><strong>CPF:</strong> ${tutorData.cpf}</p>
+                                <p><strong>Telefone:</strong> ${tutorData.telefone}</p>
+                                <p><strong>E-mail:</strong> ${tutorData.email || 'Não informado'}</p>
+                            </div>
+                            <button class="botao-acao" onclick="UI.showPetSelection()">
+                                <i class="fas fa-arrow-left"></i> Voltar
+                            </button>
+                        </div>
+                    `;
+                }, 1000);
+            },
+
+            // Agendar consulta (simulação)
+            scheduleAppointment: function() {
+                const petId = this.elements.petConsulta.value;
+                const tipo = this.elements.tipoConsulta.value;
+                const data = this.elements.dataConsulta.value;
+                const obs = this.elements.obsConsulta.value.trim();
+
+                if (!petId || !data) {
+                    this.showNotification('Preencha os campos obrigatórios', 'warning');
+                    return;
+                }
+
+                // Simular agendamento
+                setTimeout(() => {
+                    this.showNotification('Consulta agendada com sucesso!', 'success');
+                    this.elements.formConsulta.style.display = 'none';
+
+                    // Atualizar a agenda (simulação)
+                    const pet = petsData[petId];
+                    const newAppointment = {
+                        pet: pet.nome,
+                        tipo: tipo,
+                        data: new Date(data).toLocaleDateString('pt-BR', {
+                            day: '2-digit',
+                            month: '2-digit',
+                            year: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        }),
+                        observacoes: obs
+                    };
+
+                    // Adicionar à lista de consultas (simulação)
+                    const agendaItem = document.createElement('div');
+                    agendaItem.className = 'cartao-consulta';
+                    agendaItem.innerHTML = `
+                        <div class="cabecalho-consulta">
+                            <span class="nome-pet">${newAppointment.pet}</span>
+                            <span class="tipo-consulta ${newAppointment.tipo}">${
+                                newAppointment.tipo === 'rotina' ? 'Rotina' :
+                                newAppointment.tipo === 'vacina' ? 'Vacinação' :
+                                newAppointment.tipo === 'emergencia' ? 'Emergência' :
+                                newAppointment.tipo === 'cirurgia' ? 'Cirurgia' : 'Outro'
+                            }</span>
+                        </div>
+                        <div class="detalhes-consulta">
+                            <span><i class="fas fa-calendar-alt"></i> ${newAppointment.data}</span>
+                            ${newAppointment.observacoes ? `<span><i class="fas fa-comment"></i> ${newAppointment.observacoes}</span>` : ''}
+                        </div>
+                    `;
+
+                    document.querySelector('.lista-consultas').prepend(agendaItem);
+                }, 1000);
+            }
+        };
+
+        // Inicialização
+        UI.showPetSelection();
+
+        // Configurar eventos
+        document.querySelector('#form-consulta .botao-confirmar').addEventListener('click', function() {
+            UI.scheduleAppointment();
+        });
+
+        // Tornar funções acessíveis globalmente
+        window.showPetSelection = UI.showPetSelection.bind(UI);
+        window.loadPetData = UI.loadPetData.bind(UI);
+        window.showPetForm = UI.showPetForm.bind(UI);
+        window.showTutorForm = UI.showTutorForm.bind(UI);
+        window.showAppointmentForm = UI.showAppointmentForm.bind(UI);
+        window.showMedicalHistory = UI.showPetSelection.bind(UI);
+    });
+</script> *@

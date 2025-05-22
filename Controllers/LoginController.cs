@@ -1,26 +1,57 @@
-using ControlePetWeb.Models;
+﻿using ControlePetWeb.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 public class LoginController : Controller
 {
+    private readonly Context _context;
+
+    public LoginController(Context context)
+    {
+        _context = context;
+    }
+
+    [HttpGet]
     public IActionResult Index()
     {
         return View();
     }
 
     [HttpPost]
-    public IActionResult Index(LoginModel login)
+    [HttpPost]
+    public async Task<IActionResult> Entrar(string Usuario, string Senha)
     {
-        if (login.Usuario == "admin" && login.Senha == "1234")
+        // 1. Busca o usuário (agora compara senha em texto puro)
+        var usuario = await _context.Usuarios
+            .FirstOrDefaultAsync(u => u.Us_Email == Usuario && u.Us_SenhaHash == Senha); // Comparação direta
+
+        if (usuario == null)
         {
-            return RedirectToAction("Index", "PaginaInicial");
-            //ViewBag.Mensagem = "Login bem-sucedido! Bem-vindo, " + login.Usuario + ".";
-        }
-        else
-        {
-            ViewBag.Mensagem = "Usu�rio ou senha inv�lidos!";
+            ModelState.AddModelError("", "Usuário ou senha incorretos");
+            return View("Index"); // Volta para a página de login com erro
         }
 
-        return View();
+        // 2. Cria a identidade do usuário
+        var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, usuario.Us_Nome),
+        new Claim(ClaimTypes.Email, usuario.Us_Email)
+    };
+
+        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        await HttpContext.SignInAsync(new ClaimsPrincipal(identity));
+
+        // 3. Redireciona PARA O CONTROLLER CORRETO
+        return RedirectToAction("Index", "Inicio"); // ⚠️ Confirme se "Inicio" é o controller certo
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Sair()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        return RedirectToAction("Index", "Login"); // Corrigido para redirecionar para Index
     }
 }

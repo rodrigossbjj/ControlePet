@@ -1,0 +1,17 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ControlePetWeb.Models
+{
+    public class Usuario
+    {
+        [Key] // Define como chave primária
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Us_Id { get; set; }
+        public string Us_Nome { get; set; }
+        public string Us_Email { get; set; }
+        public string Us_SenhaHash { get; set; }
+        public bool Us_Ativo { get; set; }
+        public DateTime Us_DataCadastro { get; set; }
+    }
+}
