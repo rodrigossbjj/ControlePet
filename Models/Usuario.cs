@@ -13,5 +13,8 @@ namespace ControlePetWeb.Models
         public string Us_SenhaHash { get; set; }
         public bool Us_Ativo { get; set; }
         public DateTime Us_DataCadastro { get; set; }
+        public string? CodigoRecuperacao { get; set; }
+        public DateTime? CodigoValidoAte { get; set; }
+
     }
 }

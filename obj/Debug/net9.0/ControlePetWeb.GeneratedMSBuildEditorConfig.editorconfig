@@ -36,12 +36,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hSW5pY2lhbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/ControlePetWeb/Views/RecuperacaoSenha/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjdXBlcmFjYW9TZW5oYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ControlePetWeb/Views/RedefinirSenha/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVkZWZpbmlyU2VuaGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/ControlePetWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ControlePetWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ControlePetWeb/Views/ValidarCodigo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFsaWRhckNvZGlnb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/ControlePetWeb/Views/_ViewImports.cshtml]

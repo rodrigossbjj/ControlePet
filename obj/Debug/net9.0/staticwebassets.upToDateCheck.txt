@@ -8,8 +8,9 @@ wwwroot\imagens\eye.jpeg
 wwwroot\imagens\foto-banner.jpg
 wwwroot\imagens\icon.jpeg
 wwwroot\imagens\lock.jpeg
-wwwroot\imagens\logo-remov.png
+wwwroot\imagens\logo-remov1.png
 wwwroot\imagens\logo.png
+wwwroot\imagens\logo1.png
 wwwroot\imagens\pata.jpeg
 wwwroot\imagens\user.jpeg
 wwwroot\js\script.js

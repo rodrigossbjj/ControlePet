@@ -1,4 +1,4 @@
-﻿public static class PasswordHasher
+﻿public static class PasswordHasherHelper
 {
     // ⚠️ ATENÇÃO: Método INSECURE para desenvolvimento apenas!
     public static string Hash(string senha)
