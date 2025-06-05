@@ -1,0 +1,37 @@
+# Pasta de configurações do Visual Studio
+.vs/
+
+# Build
+bin/
+obj/
+
+# Arquivos de usuário e configuração local
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos temporários e logs
+*.log
+*.tmp
+*.bak
+
+# Resultados de testes
+TestResults/
+
+# Dados locais de banco
+*.mdf
+*.ldf
+
+# Configurações de pacotes
+artifacts/
+project.lock.json
+project.fragment.lock.json
+
+# Rider
+.idea/
+
+# Histórico local e outros temporários
+*.localhistory
+*.orig
+_ReSharper*/
