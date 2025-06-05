@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\ControlePetWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\wwwroot\\css\\style2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:wwwroot\\css\\style2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\models\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:models\\clinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\controllers\\recuperacaosenhacontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:controllers\\recuperacaosenhacontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\models\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:models\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\controllers\\cadastrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:controllers\\cadastrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|c:\\controlepetweb\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D7951D-1EF8-43FD-8EA8-49ED562958D8}|ControlePetWeb.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 561,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +38,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Context.cs",
+              "DocumentMoniker": "C:\\ControlePetWeb\\Models\\Context.cs",
+              "RelativeDocumentMoniker": "Models\\Context.cs",
+              "ToolTip": "C:\\ControlePetWeb\\Models\\Context.cs",
+              "RelativeToolTip": "Models\\Context.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA5wBYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T18:25:41.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "style2.css",
-              "DocumentMoniker": "C:\\ControlePetWeb\\wwwroot\\css\\style2.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\style2.css",
-              "ToolTip": "C:\\ControlePetWeb\\wwwroot\\css\\style2.css",
-              "RelativeToolTip": "wwwroot\\css\\style2.css",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-29T22:06:57.959Z",
+              "Title": "Clinica.cs",
+              "DocumentMoniker": "C:\\ControlePetWeb\\Models\\Clinica.cs",
+              "RelativeDocumentMoniker": "Models\\Clinica.cs",
+              "ToolTip": "C:\\ControlePetWeb\\Models\\Clinica.cs",
+              "RelativeToolTip": "Models\\Clinica.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T18:14:41.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\ControlePetWeb\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\ControlePetWeb\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA2wAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T18:14:15.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RecuperacaoSenhaControler.cs",
-              "DocumentMoniker": "C:\\ControlePetWeb\\Controllers\\RecuperacaoSenhaControler.cs",
-              "RelativeDocumentMoniker": "Controllers\\RecuperacaoSenhaControler.cs",
-              "ToolTip": "C:\\ControlePetWeb\\Controllers\\RecuperacaoSenhaControler.cs",
-              "RelativeToolTip": "Controllers\\RecuperacaoSenhaControler.cs",
-              "ViewState": "AgIAABAAAACAzMzMzMwQwCUAAAAVAAAAAAAAAA==",
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\ControlePetWeb\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\ControlePetWeb\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T00:22:39.208Z",
+              "WhenOpened": "2025-06-05T18:13:29.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CadastroController.cs",
+              "DocumentMoniker": "C:\\ControlePetWeb\\Controllers\\CadastroController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CadastroController.cs",
+              "ToolTip": "C:\\ControlePetWeb\\Controllers\\CadastroController.cs",
+              "RelativeToolTip": "Controllers\\CadastroController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T22:40:24.468Z",
               "EditorCaption": ""
             }
           ]

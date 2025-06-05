@@ -2,7 +2,8 @@
 {
     public class CadastroModel
     {
-        //public string Usuario { get; set; }
-        //public string Senha { get; set; }
+        public Usuario Usuario { get; set; }
+        public Cliente Cliente { get; set; }
+        public Clinica Clinica { get; set; }
     }
 }

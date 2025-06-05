@@ -1,11 +1,8 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ControlePetWeb.Models
 {
-    //[Table("Usuarios")]
-    //[Table("Clientes")]
     public class LoginModel
     {
         [Required]

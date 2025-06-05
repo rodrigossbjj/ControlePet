@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControlePetWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d27dc1e158799625661a3aae4bd80f35513ed43")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ca05278bb8326042536d8a3c3febf5a4b414cab")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControlePetWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControlePetWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

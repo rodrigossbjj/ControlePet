@@ -7,13 +7,22 @@ namespace ControlePetWeb.Models
         public Context(DbContextOptions<Context> options) : base(options) { }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Clinica> Clinicas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configurações adicionais se necessário
             modelBuilder.Entity<Usuario>()
-                .Property(u => u.Us_Email)
-                .IsRequired();
+               .HasOne(u => u.Cliente)
+               .WithOne(c => c.Usuario)
+               .HasForeignKey<Cliente>(c => c.Cli_UserId)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Cliente>()
+                .HasOne(c => c.Clinica)
+                .WithOne(cl => cl.Cliente)
+                .HasForeignKey<Clinica>(cl => cl.Cln_ClienteId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

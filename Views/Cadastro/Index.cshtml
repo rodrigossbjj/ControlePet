@@ -1,18 +1,14 @@
-﻿@{ 
-ViewData["Title"] = "Cadastro";
-}
-
+﻿@model CadastroModel
 @{
     Layout = null;
 }
 
 <header>
     <link rel="stylesheet" href="~/css/styleCadastrar.css" />
-
 </header>
 
 <div class="top-links">
-    <a asp-controller="PaginaInicial" asp-action="Index" >Home</a>
+    <a asp-controller="PaginaInicial" asp-action="Index">Home</a>
 </div>
 
 <div class="register-container">
@@ -21,43 +17,66 @@ ViewData["Title"] = "Cadastro";
     </div>
     <h1>Cadastro Completo - Sistema Veterinário</h1>
 
-    <form>
+    <form asp-action="CadastrarUsuario" method="post">
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                <strong>Erros de validação:</strong>
+                <ul>
+                    @foreach (var entry in ViewData.ModelState)
+                    {
+                        foreach (var error in entry.Value.Errors)
+                        {
+                            <li><strong>@entry.Key</strong>: @error.ErrorMessage</li>
+                        }
+                    }
+                </ul>
+            </div>
+        }
+
         <div class="form-section">
             <h2>Dados Pessoais</h2>
             <div class="form-grid">
                 <div class="input-group">
                     <label for="nome">Nome Completo*</label>
-                    <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+                    <input asp-for="Cliente.Cli_NomeCompleto" type="text" id="nome" placeholder="Digite seu nome completo" required>
+                    <span asp-validation-for="Cliente.Cli_NomeCompleto" class="text-danger"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="cpf">CPF*</label>
-                    <input type="text" id="cpf" placeholder="Digite seu CPF" required>
+                    <input asp-for="Cliente.Cli_CPF" type="text" id="cpf" placeholder="Digite seu CPF" required>
+                    <span asp-validation-for="Cliente.Cli_CPF" class="text-danger"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="rg">RG</label>
-                    <input type="text" id="rg" placeholder="Digite seu RG">
+                    <input asp-for="Cliente.Cli_RG" type="text" id="rg" placeholder="Digite seu RG">
+                    <span asp-validation-for="Cliente.Cli_RG" class="text-danger"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="data-nascimento">Data de Nascimento</label>
-                    <input type="date" id="data-nascimento">
+                    <input asp-for="Cliente.Cli_DataNascimento" type="date" id="data-nascimento">
+                    <span asp-validation-for="Cliente.Cli_DataNascimento" class="text-danger"></span>
                 </div>
 
                 <div class="input-group full-width">
                     <label for="endereco">Endereço Residencial*</label>
-                    <input type="text" id="endereco" placeholder="Digite seu endereço completo" required>
+                    <input asp-for="Cliente.Cli_EnderecoResidencial" type="text" id="endereco" placeholder="Digite seu endereço completo" required>
+                    <span asp-validation-for="Cliente.Cli_EnderecoResidencial" class="text-danger"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="telefone">Telefone*</label>
-                    <input type="tel" id="telefone" placeholder="Digite seu telefone" required>
+                    <input asp-for="Cliente.Cli_Telefone" type="tel" id="telefone" placeholder="Digite seu telefone" required>
+                    <span asp-validation-for="Cliente.Cli_Telefone" class="text-danger"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="celular">Celular</label>
-                    <input type="tel" id="celular" placeholder="Digite seu celular">
+                    <input asp-for="Cliente.Cli_Celular" type="tel" id="celular" placeholder="Digite seu celular">
+                    <span asp-validation-for="Cliente.Cli_Celular" class="text-danger"></span>
                 </div>
             </div>
         </div>
@@ -67,12 +86,13 @@ ViewData["Title"] = "Cadastro";
             <div class="form-grid">
                 <div class="input-group">
                     <label for="crmv">CRMV*</label>
-                    <input type="text" id="crmv" placeholder="Digite seu registro CRMV" required>
+                    <input asp-for="Cliente.Cli_CRMV" type="text" id="crmv" placeholder="Digite seu registro CRMV" required>
+                    <span asp-validation-for="Cliente.Cli_CRMV" class="text-danger"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="especialidade">Especialidade</label>
-                    <select id="especialidade">
+                    <select asp-for="Cliente.Cli_Especialidade" id="especialidade">
                         <option value="">Selecione sua especialidade</option>
                         <option value="clinica">Clínica Geral</option>
                         <option value="cirurgia">Cirurgia</option>
@@ -89,32 +109,37 @@ ViewData["Title"] = "Cadastro";
             <div class="form-grid">
                 <div class="input-group full-width">
                     <label for="clinica">Nome da Clínica Veterinária*</label>
-                    <input type="text" id="clinica" placeholder="Digite o nome da clínica" required>
+                    <input asp-for="Clinica.Cln_Nome" type="text" id="clinica" placeholder="Digite o nome da clínica" required>
+                    <span asp-validation-for="Clinica.Cln_Nome" class="text-danger"></span>
                 </div>
 
                 <div class="input-group full-width">
                     <label for="endereco-clinica">Endereço da Clínica*</label>
-                    <input type="text" id="endereco-clinica" placeholder="Digite o endereço completo da clínica" required>
+                    <input asp-for="Clinica.Cln_Endereco" type="text" id="endereco-clinica" placeholder="Digite o endereço completo da clínica" required>
+                    <span asp-validation-for="Clinica.Cln_Endereco" class="text-danger"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="cnpj">CNPJ*</label>
-                    <input type="text" id="cnpj" placeholder="Digite o CNPJ da clínica" required>
+                    <input asp-for="Clinica.Cln_CNPJ" type="text" id="cnpj" placeholder="Digite o CNPJ da clínica" required>
+                    <span asp-validation-for="Clinica.Cln_CNPJ" class="text-danger"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="telefone-clinica">Telefone da Clínica*</label>
-                    <input type="tel" id="telefone-clinica" placeholder="Digite o telefone da clínica" required>
+                    <input asp-for="Clinica.Cln_Telefone" type="tel" id="telefone-clinica" placeholder="Digite o telefone da clínica" required>
+                    <span asp-validation-for="Clinica.Cln_Telefone" class="text-danger"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="horario-funcionamento">Horário de Funcionamento</label>
-                    <input type="text" id="horario-funcionamento" placeholder="Ex: 08:00 às 18:00">
+                    <input asp-for="Clinica.Cln_HorarioFuncionamento" type="text" id="horario-funcionamento" placeholder="Ex: 08:00 às 18:00">
+                    <span asp-validation-for="Clinica.Cln_HorarioFuncionamento" class="text-danger"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="tipo-clinica">Tipo de Clínica</label>
-                    <select id="tipo-clinica">
+                    <select asp-for="Clinica.Cln_Tipo" id="tipo-clinica">
                         <option value="">Selecione o tipo</option>
                         <option value="pequenos">Pequenos Animais</option>
                         <option value="grandes">Grandes Animais</option>
@@ -130,22 +155,22 @@ ViewData["Title"] = "Cadastro";
             <div class="form-grid">
                 <div class="input-group">
                     <label for="email">E-mail*</label>
-                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                    <input asp-for="Usuario.Us_Email" type="email" id="email" placeholder="Digite seu e-mail" required>
                 </div>
 
                 <div class="input-group">
                     <label for="confirm-email">Confirmar E-mail*</label>
-                    <input type="email" id="confirm-email" placeholder="Digite seu e-mail novamente" required>
+                    <input asp-for="Usuario.Us_Email" type=" email" id="confirm-email" placeholder="Digite seu e-mail novamente" required>
                 </div>
 
                 <div class="input-group">
                     <label for="password">Senha*</label>
-                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                    <input asp-for="Usuario.Us_SenhaHash" type="password" id="password" placeholder="Digite sua senha" required>
                 </div>
 
                 <div class="input-group">
                     <label for="confirm-password">Confirmar Senha*</label>
-                    <input type="password" id="confirm-password" placeholder="Digite sua senha novamente" required>
+                    <input asp-for="Usuario.Us_SenhaHash" type="password" id="confirm-password" placeholder="Digite sua senha novamente" required>
                 </div>
             </div>
         </div>

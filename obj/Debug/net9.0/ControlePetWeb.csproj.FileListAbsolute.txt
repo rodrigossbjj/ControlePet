@@ -149,4 +149,4 @@ C:\ControlePetWeb\bin\Debug\net9.0\MailKit.dll
 C:\ControlePetWeb\bin\Debug\net9.0\MimeKit.dll
 C:\ControlePetWeb\bin\Debug\net9.0\NETCore.MailKit.dll
 C:\ControlePetWeb\bin\Debug\net9.0\BouncyCastle.Crypto.dll
-C:\ControlePetWeb\obj\Debug\net9.0\compressed\i4n16i4f2r-y2sencgyy0.gz
+C:\ControlePetWeb\obj\Debug\net9.0\compressed\i4n16i4f2r-twt3bciz81.gz
