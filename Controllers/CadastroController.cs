@@ -1,3 +1,4 @@
+using ControlePetWeb.Helpers;
 using ControlePetWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,12 +26,26 @@ public class CadastroController : Controller
         if (!ModelState.IsValid)
         {
             ModelState.AddModelError("", "Verifique os dados e tente novamente.");
-            return View(model);
+            return View("Index", model);
         }
 
         using var transaction = await _context.Database.BeginTransactionAsync();
         try
         {
+            //Verifia CPF Válido
+            if (!ValidarCPF.CpfValido(model.Cliente.Cli_CPF))
+            {
+                ModelState.AddModelError("Cliente.Cli_CPF", "CPF inválido");
+                return View("Index", model);
+            }
+
+            //Verifica CNPJ Válido
+            if (!ValidarCNPJ.CnpjValido(model.Clinica.Cln_CNPJ))
+            {
+                ModelState.AddModelError("Clinica.Cln_CNPJ", "CNPJ inválido");
+                return View("Index", model);
+            }
+
             // Define data de cadastro
             model.Usuario.Us_DataCadastro = DateTime.Now;
 
@@ -54,11 +69,27 @@ public class CadastroController : Controller
             TempData["MensagemSucesso"] = "Cadastro realizado com sucesso!";
             return RedirectToAction("Index", "Login");
         }
+        catch (DbUpdateException ex)
+        {
+            if (ex.InnerException?.Message.Contains("UQ__Usuarios") == true ||
+                ex.InnerException?.Message.Contains("duplicate") == true) // caso rode em outro banco
+            {
+                ModelState.AddModelError("Usuario.Us_Email", "Este e-mail já está em uso. Por favor, informe outro.");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Erro ao realizar cadastro: " + (ex.InnerException?.Message ?? ex.Message));
+            }
+
+            await transaction.RollbackAsync();
+            return View("Index", model);
+        }
+
         catch (Exception ex)
         {
             await transaction.RollbackAsync();
             ModelState.AddModelError("", "Erro ao realizar cadastro: " + (ex.InnerException?.Message ?? ex.Message));
-            return View(model);
+            return View("Index", model);
         }
     }
 }

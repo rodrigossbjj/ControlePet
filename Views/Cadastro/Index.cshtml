@@ -5,10 +5,11 @@
 
 <header>
     <link rel="stylesheet" href="~/css/styleCadastrar.css" />
+
 </header>
 
 <div class="top-links">
-    <a asp-controller="PaginaInicial" asp-action="Index">Home</a>
+    <a asp-controller="PaginaInicial" asp-action="Index">Início</a>
 </div>
 
 <div class="register-container">
@@ -18,19 +19,17 @@
     <h1>Cadastro Completo - Sistema Veterinário</h1>
 
     <form asp-action="CadastrarUsuario" method="post">
+
         @if (!ViewData.ModelState.IsValid)
         {
-            <div class="alert alert-danger">
-                <strong>Erros de validação:</strong>
-                <ul>
-                    @foreach (var entry in ViewData.ModelState)
+            <div class="text-center mb-4">
+                <div class="d-inline-block p-3 border border-danger rounded"
+                     style="font-size:1.1rem; font-weight:600; color:#dc3545; border-width:2px;">
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
                     {
-                        foreach (var error in entry.Value.Errors)
-                        {
-                            <li><strong>@entry.Key</strong>: @error.ErrorMessage</li>
-                        }
+                        <div>@error.ErrorMessage</div>
                     }
-                </ul>
+                </div>
             </div>
         }
 
@@ -199,3 +198,18 @@
         </div>
     </form>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+@* Aplicando Mascaras aos campos com JQuery  *@
+<script>
+    $(document).ready(function() {
+        $('#cpf').mask('000.000.000-00'); // CPF
+        $('#cnpj').mask('00.000.000/0000-00'); //CNPJ
+        $('#telefone, #telefone-clinica').mask('(00) 0000-0000'); // Telefone fixo
+        $('#celular').mask('(00) 00000-0000'); //Celular com 9
+        $('#rg').mask('0000000000-0'); //RG SSPDS-CE
+    });
+</script>
