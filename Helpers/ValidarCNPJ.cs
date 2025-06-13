@@ -3,7 +3,7 @@
     public class ValidarCNPJ
     {
         public static bool CnpjValido(string cnpj)
-        {
+        { 
             if (string.IsNullOrEmpty(cnpj))
                 return false;
 
