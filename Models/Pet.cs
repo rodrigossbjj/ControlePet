@@ -16,7 +16,23 @@ public class Pet
 
     public string pet_Raca { get; set; }
 
-    public DateTime pet_DataNascimento { get; set; }
+    [StringLength(1)]
+    public string pet_Sexo { get; set; }
+
+    [DataType(DataType.Date)]
+    public DateTime? pet_DataNascimento { get; set; }
+
+    public bool pet_Castrado { get; set; }
+
+    public string pet_Cor { get; set; }
+
+    public string pet_Porte { get; set; }
+
+    public string pet_Observacoes { get; set; }
+
+    public string pet_FotoUrl { get; set; }
+
+    public bool pet_Ativo { get; set; } = true;
 
     // FK para o Tutor
     [ForeignKey("Tutor")]
