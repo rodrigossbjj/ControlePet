@@ -3,41 +3,48 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-[Table("Pets")]
-public class Pet
+namespace ControlePetWeb.Models
 {
-    [Key]
-    public int pet_Id { get; set; }
+    public class Pet
+    {
+        [Key]
+        public int pet_Id { get; set; }
 
-    [Required]
-    public string pet_Nome { get; set; }
+        [Required(ErrorMessage = "O nome do pet é obrigatório.")]
+        [StringLength(100, ErrorMessage = "O nome deve ter no máximo 100 caracteres.")]
+        public string pet_Nome { get; set; }
 
-    public string pet_Especie { get; set; }
+        [Required(ErrorMessage = "A espécie é obrigatória.")]
+        public string pet_Especie { get; set; }
 
-    public string pet_Raca { get; set; }
+        public string pet_Raca { get; set; }
 
-    [StringLength(1)]
-    public string pet_Sexo { get; set; }
+        [StringLength(1, ErrorMessage = "Sexo deve ser M (Macho) ou F (Fêmea).")]
+        public string pet_Sexo { get; set; }
 
-    [DataType(DataType.Date)]
-    public DateTime? pet_DataNascimento { get; set; }
+        [DataType(DataType.Date)]
+        [Display(Name = "Data de Nascimento")]
+        public DateTime? pet_DataNascimento { get; set; }
 
-    public bool pet_Castrado { get; set; }
+        public bool pet_Castrado { get; set; }
 
-    public string pet_Cor { get; set; }
+        public string pet_Cor { get; set; }
 
-    public string pet_Porte { get; set; }
+        public string pet_Porte { get; set; }
 
-    public string pet_Observacoes { get; set; }
+        [StringLength(500, ErrorMessage = "Observações devem ter no máximo 500 caracteres.")]
+        public string pet_Observacoes { get; set; }
 
-    public string pet_FotoUrl { get; set; }
+        public string pet_FotoUrl { get; set; }
 
-    public bool pet_Ativo { get; set; } = true;
+        public bool pet_Ativo { get; set; } = true;
 
-    // FK para o Tutor
-    [ForeignKey("Tutor")]
-    public int pet_TutorId { get; set; }
+        //ForingKey para o Tutor
+        [Required(ErrorMessage = "É necessário selecionar um tutor.")]
+        [ForeignKey("Tutor")]
+        public int pet_TutorId { get; set; }
 
-    [ValidateNever]
-    public Tutor Tutor { get; set; }
+        [ValidateNever]
+        public Tutor Tutor { get; set; }
+    }
 }

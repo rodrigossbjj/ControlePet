@@ -25,7 +25,6 @@ namespace ControlePetWeb.Models
             A maior parte é usada para estabelecer os relaciomentos das tabelas e 
             como elas estão se comunicando. */
 
-
             //Relação 1 usário para 1 cliente 1:1
             modelBuilder.Entity<Usuario>()
                .HasOne(u => u.Cliente)
@@ -47,6 +46,7 @@ namespace ControlePetWeb.Models
                 .HasForeignKey(p => p.pet_TutorId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            //Relação N:1 um pet pode ter N consultas agendadas
             modelBuilder.Entity<Consulta>()
                 .HasOne(c => c.Pet)
                 .WithMany()

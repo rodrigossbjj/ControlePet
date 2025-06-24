@@ -19,21 +19,28 @@ namespace ControlePetWeb.Controllers
             return View(pets);
         }
 
-        public IActionResult Create()
+        public IActionResult CadastrarPet()
         {
             ViewBag.Tutores = _context.Tutores.ToList();
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Pet pet)
+        public IActionResult CadastrarPet(Pet pet)
         {
+            //Verifica se data de nascimento é futura
+            if (pet.pet_DataNascimento.HasValue && pet.pet_DataNascimento.Value > DateTime.Today)
+            {
+                ModelState.AddModelError("pet_DataNascimento", "A data de nascimento não pode ser no futuro.");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Pets.Add(pet);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
+
             ViewBag.Tutores = _context.Tutores.ToList();
             return View(pet);
         }

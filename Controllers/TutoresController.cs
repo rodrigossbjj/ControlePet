@@ -26,6 +26,12 @@ namespace ControlePetWeb.Controllers
         [HttpPost]
         public IActionResult Create(Tutor tutor)
         {
+            //Verifica se já existe um e-mail igual no banco
+            if (_context.Tutores.Any(t => t.tut_Email == tutor.tut_Email))
+            {
+                ModelState.AddModelError("tut_Email", "Já existe um tutor cadastrado com esse e-mail.");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Tutores.Add(tutor);

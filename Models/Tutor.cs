@@ -1,22 +1,26 @@
-﻿using ControlePetWeb.Models;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-[Table("Tutores")]
-public class Tutor
+namespace ControlePetWeb.Models
 {
-    [Key]
-    public int tut_Id { get; set; }
+    public class Tutor
+    {
+        [Key]
+        public int tut_Id { get; set; }
 
-    [Required]
-    public string tut_Nome { get; set; }
+        [Required(ErrorMessage = "O nome é obrigatório.")]
+        public string tut_Nome { get; set; }
 
-    public string tut_Email { get; set; }
+        [Required(ErrorMessage = "O e-mail é obrigatório.")]
+        [EmailAddress(ErrorMessage = "E-mail inválido.")]
+        public string tut_Email { get; set; }
 
-    public string tut_Telefone { get; set; }
+        [Required(ErrorMessage = "O telefone é obrigatório.")]
+        [Phone(ErrorMessage = "Telefone inválido.")]
+        public string tut_Telefone { get; set; }
 
-    //Relacionamento: um Tutor pode ter muitos Pets
-    [ValidateNever]
-    public ICollection<Pet> Pets { get; set; }
+        //Relacionamento: um Tutor pode ter muitos Pets
+        [ValidateNever]
+        public ICollection<Pet> Pets { get; set; }
+    }
 }
