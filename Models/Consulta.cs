@@ -5,6 +5,7 @@ namespace ControlePetWeb.Models
 {
     public class Consulta
     {
+        [Key]
         public int Con_Id { get; set; }
 
         [Required]

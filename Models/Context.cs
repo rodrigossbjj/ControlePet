@@ -16,6 +16,8 @@ namespace ControlePetWeb.Models
         public DbSet<Tutor> Tutores { get; set; }
         //Tabela que guarda as informações dos PETS
         public DbSet<Pet> Pets { get; set; }
+        //Tabela que guarda as informações da Consulta
+        public DbSet<Consulta> Consultas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -44,6 +46,12 @@ namespace ControlePetWeb.Models
                 .WithOne(p => p.Tutor)
                 .HasForeignKey(p => p.pet_TutorId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Consulta>()
+                .HasOne(c => c.Pet)
+                .WithMany()
+                .HasForeignKey(c => c.Con_PetId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
