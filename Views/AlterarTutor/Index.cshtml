@@ -1,0 +1,93 @@
+@model Tutor
+@{
+    ViewData["Title"] = "Alterar Tutor";
+    Layout = "~/Views/Shared/_MenuAgenda.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+{{-- Seletor de Tutor - Sempre visível inicialmente --}}
+<div id="seletor-tutor" class="container-seletor">
+    <h3><i class="fas fa-search"></i> Selecione um Tutor para Alterar</h3>
+    <select class="seletor-form" id="lista-tutores">
+        <option value="">-- Selecione --</option>
+        @if (ViewBag.TutoresParaSelecao != null)
+        {
+            foreach (var t in ViewBag.TutoresParaSelecao)
+            {
+                <option value="@t.tut_Id">@t.tut_Nome</option>
+            }
+        }
+        else
+        {
+            <option value="1">João Silva</option>
+            <option value="2">Maria Souza</option>
+        }
+    </select>
+    <button type="button" class="botao-confirmar" id="btnCarregarTutor">Carregar</button>
+</div>
+
+{{-- Formulário de Edição de Tutor - Oculto inicialmente --}}
+<div id="form-alterar-tutor" class="container-formulario" style="display:none;">
+    <h3>Dados do Tutor</h3>
+    <form asp-action="Edit" asp-controller="Tutores" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="tut_Id" />
+
+        <div class="grupo-formulario">
+            <label asp-for="tut_Nome" class="control-label">Nome do Tutor:</label>
+            <input asp-for="tut_Nome" class="input-formulario" />
+            <span asp-validation-for="tut_Nome" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="tut_Email" class="control-label">E-mail:</label>
+            <input asp-for="tut_Email" class="input-formulario" type="email" />
+            <span asp-validation-for="tut_Email" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="tut_Telefone" class="control-label">Telefone:</label>
+            <input asp-for="tut_Telefone" class="input-formulario" />
+            <span asp-validation-for="tut_Telefone" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <button type="submit" class="botao-confirmar">Salvar Alterações</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#btnCarregarTutor').on('click', function () {
+                var tutorId = $('#lista-tutores').val();
+                if (tutorId) {
+                    window.location.href = '@Url.Action("Edit", "Tutores")/' + tutorId;
+                } else {
+                    alert('Por favor, selecione um tutor para alterar.');
+                }
+            });
+
+            @if (Model != null && Model.tut_Id > 0)
+            {
+                <text>
+                $('#lista-tutores').val(@Model.tut_Id);
+                $('#form-alterar-tutor').show();
+                </text>
+            }
+        });
+    </script>
+    <style>
+        .text-danger {
+            color: #dc3545;
+            font-size: 0.875em;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
+}

@@ -1,0 +1,50 @@
+
+@model Tutor
+@{
+    ViewData["Title"] = "Cadastrar Novo Tutor";
+    Layout = "~/Views/Shared/_MenuAgenda.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container-formulario">
+    <form asp-action="Create" asp-controller="Tutores" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="grupo-formulario">
+            <label asp-for="tut_Nome" class="control-label">Nome do Tutor:</label>
+            <input asp-for="tut_Nome" class="input-formulario" />
+            <span asp-validation-for="tut_Nome" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="tut_Email" class="control-label">E-mail:</label>
+            <input asp-for="tut_Email" class="input-formulario" type="email" />
+            <span asp-validation-for="tut_Email" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="tut_Telefone" class="control-label">Telefone:</label>
+            <input asp-for="tut_Telefone" class="input-formulario" />
+            <span asp-validation-for="tut_Telefone" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <button type="submit" class="botao-confirmar">Salvar Tutor</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <style>
+        .text-danger {
+            color: #dc3545; /* Cor para mensagens de validação */
+            font-size: 0.875em;
+            margin-top: 5px;
+            display: block; /* Para garantir que o span ocupe uma nova linha */
+        }
+    </style>
+}

@@ -1,0 +1,95 @@
+@model Pet
+@{
+    ViewData["Title"] = "Cadastrar Novo Pet";
+    Layout = "~/Views/Shared/_MenuAgenda.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container-formulario">
+    <form asp-action="Create" asp-controller="Pets" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Nome" class="control-label">Nome do Pet:</label>
+            <input asp-for="pet_Nome" class="input-formulario" />
+            <span asp-validation-for="pet_Nome" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Especie" class="control-label">Espécie:</label>
+            <input asp-for="pet_Especie" class="input-formulario" />
+            <span asp-validation-for="pet_Especie" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Raca" class="control-label">Raça:</label>
+            <input asp-for="pet_Raca" class="input-formulario" />
+            <span asp-validation-for="pet_Raca" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Sexo" class="control-label">Sexo (M/F):</label>
+            <input asp-for="pet_Sexo" class="input-formulario" maxlength="1" />
+            <span asp-validation-for="pet_Sexo" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_DataNascimento" class="control-label">Data de Nascimento:</label>
+            <input asp-for="pet_DataNascimento" type="date" class="input-formulario" />
+            <span asp-validation-for="pet_DataNascimento" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario checkbox-group">
+            <input type="checkbox" asp-for="pet_Castrado" />
+            <label asp-for="pet_Castrado">Castrado</label>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Cor" class="control-label">Cor:</label>
+            <input asp-for="pet_Cor" class="input-formulario" />
+            <span asp-validation-for="pet_Cor" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Porte" class="control-label">Porte:</label>
+            <input asp-for="pet_Porte" class="input-formulario" />
+            <span asp-validation-for="pet_Porte" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Observacoes" class="control-label">Observações:</label>
+            <textarea asp-for="pet_Observacoes" class="textarea-formulario"></textarea>
+            <span asp-validation-for="pet_Observacoes" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_FotoUrl" class="control-label">URL da Foto:</label>
+            <input asp-for="pet_FotoUrl" class="input-formulario" />
+            <span asp-validation-for="pet_FotoUrl" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_TutorId" class="control-label">Tutor:</label>
+            <select asp-for="pet_TutorId" class="seletor-form"
+                    asp-items="@(new SelectList(ViewBag.Tutores, "tut_Id", "tut_Nome"))">
+                <option value="">-- Selecione um Tutor --</option>
+            </select>
+            <span asp-validation-for="pet_TutorId" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <button type="submit" class="botao-confirmar">Salvar Pet</button>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <style>
+        .checkbox-group { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+        .checkbox-group input[type="checkbox"] { width: auto; margin-top: 0; }
+        .text-danger { color: #dc3545; font-size: 0.875em; margin-top: 5px; display: block; }
+    </style>
+}

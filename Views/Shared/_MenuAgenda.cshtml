@@ -1,0 +1,72 @@
+@* Views/Shared/_MenuAgenda.cshtml *@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-principal">
+    <div class="painel-conteudo">
+        <div class="painel-acoes">
+            <h2><i class="fas fa-file-alt"></i> Cadastros</h2>
+            <div class="botoes-acao">
+                <a class="botao-acao" asp-controller="Pets" asp-action="Index">
+                    <i class="fas fa-plus"></i>
+                    <span>Cadastrar Pet</span>
+                </a>
+                <a class="botao-acao" asp-area="" asp-controller="Tutores" asp-action="Index">
+                    <i class="fas fa-plus"></i>
+                    <span>Cadastrar Tutor</span>
+                </a>
+            </div>
+
+            <h2><i class="fas fa-edit"></i> Gerenciamento</h2>
+            <div class="botoes-acao">
+                <a class="botao-acao" asp-area="" asp-controller="Pets" asp-action="Index">
+                    <i class="fas fa-pen"></i>
+                    <span>Alterar Pet</span>
+                </a>
+                <a class="botao-acao" asp-area="" asp-controller="Tutores" asp-action="Index">
+                    <i class="fas fa-pen"></i>
+                    <span>Alterar Tutor</span>
+                </a>
+            </div>
+
+            <h2><i class="fas fa-calendar-check"></i> Consultas</h2>
+            <div class="botoes-acao">
+                <a class="botao-acao" asp-area="" asp-controller="Consulta" asp-action="Marcar">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Marcar Consulta</span>
+                </a>
+                <a class="botao-acao" asp-area="" asp-controller="Consulta" asp-action="HistoricoPet">
+                    <i class="fas fa-file-medical"></i>
+                    <span>Histórico do Pet</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="painel-direito">
+            @RenderBody()
+        </div>
+    </div>
+
+    <section class="secao-agenda">
+        <h2><i class="fas fa-calendar-day"></i> Agenda</h2>
+        <p>Próximas consultas agendadas</p>
+        <div class="lista-consultas">
+            <div class="cartao-consulta">
+                <div class="cabecalho-consulta">
+                    <span class="nome-pet">Totó</span>
+                    <span class="tipo-consulta vacina">Vacinação</span>
+                </div>
+                <div class="detalhes-consulta">
+                    <span><i class="fas fa-calendar-alt"></i> 22/04/2023 - 14:30</span>
+                    <span><i class="fas fa-user"></i> Dr. Silva</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    @await RenderSectionAsync("Scripts", required: false)
+
+}

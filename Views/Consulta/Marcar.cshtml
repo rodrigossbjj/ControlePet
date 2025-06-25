@@ -1,0 +1,57 @@
+@model ControlePetWeb.Models.Consulta
+@{
+    ViewData["Title"] = "Marcar Nova Consulta";
+    Layout = "~/Views/Shared/_MenuAgenda.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container-formulario">
+    <form asp-action="Marcar" asp-controller="Consulta" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="grupo-formulario">
+            <label asp-for="Con_PetId" class="control-label">Pet:</label>
+            <select asp-for="Con_PetId" class="seletor-form"
+                    asp-items="@(new SelectList(ViewBag.Pets, "pet_Id", "pet_Nome"))">
+                <option value="">-- Selecione um Pet --</option>
+            </select>
+            <span asp-validation-for="Con_PetId" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="Con_Data" class="control-label">Data e Hora:</label>
+            <input asp-for="Con_Data" type="datetime-local" class="input-formulario" />
+            <span asp-validation-for="Con_Data" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="Con_Descricao" class="control-label">Descrição/Motivo:</label>
+            <textarea asp-for="Con_Descricao" class="textarea-formulario"></textarea>
+            <span asp-validation-for="Con_Descricao" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario" style="display:none;">
+            <label asp-for="Con_Status" class="control-label">Status:</label>
+            <input asp-for="Con_Status" class="input-formulario" value="Agendada" />
+        </div>
+
+        <div class="grupo-formulario">
+            <button type="submit" class="botao-confirmar">Agendar Consulta</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <style>
+        .text-danger {
+            color: #dc3545;
+            font-size: 0.875em;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
+}

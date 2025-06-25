@@ -1,0 +1,156 @@
+@model Pet
+@{
+    ViewData["Title"] = "Alterar Pet";
+    Layout = "~/Views/Shared/_MenuAgenda.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+{{-- Seletor de Pet - Sempre visível inicialmente --}}
+<div id="seletor-pet" class="container-seletor">
+    <h3><i class="fas fa-search"></i> Selecione um Pet para Alterar</h3>
+    <select class="seletor-form" id="lista-pets">
+        <option value="">-- Selecione --</option>
+        @if (ViewBag.PetsParaSelecao != null)
+        {
+            foreach (var p in ViewBag.PetsParaSelecao)
+            {
+                <option value="@p.pet_Id">@p.pet_Nome (@p.pet_Raca - @p.Tutor?.tut_Nome)</option>
+            }
+        }
+        else
+        {
+            <option value="1">Totó (Labrador - João Silva)</option>
+            <option value="2">Mingau (Persa - Maria Souza)</option>
+            <option value="3">Rex (Pastor Alemão - Carlos Oliveira)</option>
+        }
+    </select>
+    <button type="button" class="botao-confirmar" id="btnCarregarPet">Carregar</button>
+</div>
+
+{{-- Formulário de Edição de Pet - Oculto inicialmente --}}
+<div id="form-alterar-pet" class="container-formulario" style="display:none;">
+    <h3>Dados do Pet</h3>
+    <form asp-action="Edit" asp-controller="Pets" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="pet_Id" />
+        <input type="hidden" asp-for="pet_Ativo" />
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Nome" class="control-label">Nome do Pet:</label>
+            <input asp-for="pet_Nome" class="input-formulario" />
+            <span asp-validation-for="pet_Nome" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Especie" class="control-label">Espécie:</label>
+            <input asp-for="pet_Especie" class="input-formulario" />
+            <span asp-validation-for="pet_Especie" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Raca" class="control-label">Raça:</label>
+            <input asp-for="pet_Raca" class="input-formulario" />
+            <span asp-validation-for="pet_Raca" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Sexo" class="control-label">Sexo (M/F):</label>
+            <input asp-for="pet_Sexo" class="input-formulario" maxlength="1" />
+            <span asp-validation-for="pet_Sexo" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_DataNascimento" class="control-label">Data de Nascimento:</label>
+            <input asp-for="pet_DataNascimento" type="date" class="input-formulario" />
+            <span asp-validation-for="pet_DataNascimento" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario checkbox-group">
+            <input type="checkbox" asp-for="pet_Castrado" />
+            <label asp-for="pet_Castrado">Castrado</label>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Cor" class="control-label">Cor:</label>
+            <input asp-for="pet_Cor" class="input-formulario" />
+            <span asp-validation-for="pet_Cor" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Porte" class="control-label">Porte:</label>
+            <input asp-for="pet_Porte" class="input-formulario" />
+            <span asp-validation-for="pet_Porte" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_Observacoes" class="control-label">Observações:</label>
+            <textarea asp-for="pet_Observacoes" class="textarea-formulario"></textarea>
+            <span asp-validation-for="pet_Observacoes" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_FotoUrl" class="control-label">URL da Foto:</label>
+            <input asp-for="pet_FotoUrl" class="input-formulario" />
+            <span asp-validation-for="pet_FotoUrl" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label asp-for="pet_TutorId" class="control-label">Tutor:</label>
+            <select asp-for="pet_TutorId" class="seletor-form"
+                    asp-items="@(new SelectList(ViewBag.Tutores, "tut_Id", "tut_Nome"))">
+                <option value="">-- Selecione um Tutor --</option>
+            </select>
+            <span asp-validation-for="pet_TutorId" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <button type="submit" class="botao-confirmar">Salvar Alterações</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function () {
+            $('#btnCarregarPet').on('click', function () {
+                var petId = $('#lista-pets').val();
+                if (petId) {
+                    window.location.href = '@Url.Action("Edit", "Pets")/' + petId;
+                } else {
+                    alert('Por favor, selecione um pet para alterar.');
+                }
+            });
+
+            
+            @if (Model != null && Model.pet_Id > 0)
+            {
+                <text>
+                $('#lista-pets').val(@Model.pet_Id); // Seleciona o pet no dropdown
+                $('#form-alterar-pet').show(); // Mostra o formulário
+                </text>
+            }
+        });
+    </script>
+    <style>
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 0;
+        }
+        .text-danger {
+            color: #dc3545;
+            font-size: 0.875em;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
+}
