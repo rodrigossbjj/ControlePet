@@ -14,17 +14,16 @@ namespace ControlePetWeb.Controllers
 
         public IActionResult Index()
         {
-            var tutores = _context.Tutores.ToList();
-            return View(tutores);
+            return View("~/Views/AlterarTutor/Index.cshtml", new Tutor());
         }
 
-        public IActionResult Create()
+        public IActionResult CadastrarTutor()
         {
-            return View();
+            return View("~/Views/Tutores/CadastrarTutor.cshtml");
         }
 
         [HttpPost]
-        public IActionResult Create(Tutor tutor)
+        public IActionResult CadastrarTutor(Tutor tutor)
         {
             //Verifica se já existe um e-mail igual no banco
             if (_context.Tutores.Any(t => t.tut_Email == tutor.tut_Email))

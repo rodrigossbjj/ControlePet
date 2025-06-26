@@ -13,16 +13,25 @@ namespace ControlePetWeb.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? id)
         {
-            var pets = _context.Pets.Include(p => p.Tutor).ToList();
-            return View(pets);
+            ViewBag.PetsParaSelecao = _context.Pets.Include(p => p.Tutor).ToList();
+            ViewBag.Tutores = _context.Tutores.ToList();
+
+            // Se tiver ID, carrega o pet para edição
+            if (id != null)
+            {
+                var petParaEditar = _context.Pets.Find(id);
+                return View("~/Views/AlterarPet/Index.cshtml", petParaEditar);
+            }
+
+            return View("~/Views/AlterarPet/Index.cshtml",new Pet());
         }
 
         public IActionResult CadastrarPet()
         {
             ViewBag.Tutores = _context.Tutores.ToList();
-            return View();
+            return View("~/Views/Pets/CadastrarPet.cshtml", new Pet());
         }
 
         [HttpPost]

@@ -125,14 +125,14 @@
                 }
             });
 
-            
-            @if (Model != null && Model.pet_Id > 0)
-            {
-                <text>
-                $('#lista-pets').val(@Model.pet_Id); // Seleciona o pet no dropdown
-                $('#form-alterar-pet').show(); // Mostra o formulário
-                </text>
-            }
+
+        @if (Model != null && Model.pet_Id > 0)
+        {
+                    <text>
+                    $('#lista-pets').val(@Model.pet_Id);
+                    $('#form-alterar-pet').show();
+                    </text>
+        }
         });
     </script>
     <style>
@@ -142,10 +142,12 @@
             gap: 10px;
             margin-top: 10px;
         }
-        .checkbox-group input[type="checkbox"] {
-            width: auto;
-            margin-top: 0;
-        }
+
+            .checkbox-group input[type="checkbox"] {
+                width: auto;
+                margin-top: 0;
+            }
+
         .text-danger {
             color: #dc3545;
             font-size: 0.875em;
