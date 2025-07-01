@@ -10,7 +10,7 @@ namespace ControlePetWeb.Controllers
         private readonly Context _context;
 
         public ConsultasController(Context context)
-        {
+        {   
             _context = context;
         }
 
@@ -18,7 +18,7 @@ namespace ControlePetWeb.Controllers
         public IActionResult Agendar()
         {
             ViewBag.Pets = _context.Pets.ToList();
-            return View();
+            return View("~/Views/Consulta/Agendar.cshtml");
         }
 
         // POST: Consultas/Agendar
@@ -32,11 +32,14 @@ namespace ControlePetWeb.Controllers
                 consulta.Con_Status = "Agendada"; // Status padrão
                 _context.Consultas.Add(consulta);
                 await _context.SaveChangesAsync();
+
+                TempData["MensagemSucesso"] = "Consulta agendada com sucesso!";
                 return RedirectToAction(nameof(Index));
             }
 
+            TempData["MensagemErro"] = "Erro ao agendar consulta. Verifique os dados informados.";
             ViewBag.Pets = _context.Pets.ToList();
-            return View(consulta);
+            return View("~/Views/Consulta/Agendar.cshtml", consulta);
         }
 
         // GET: Consultas

@@ -13,10 +13,13 @@ namespace ControlePetWeb.Models
 
         [Required]
         public DateTime Con_Data { get; set; }
+        
+        [Required]
+        public TimeSpan Con_Hora { get; set; }
 
         public string Con_Descricao { get; set; }
 
-        public string Con_Status { get; set; } //Ex: "Agendada", "Realizada", "Cancelada"
+        public string? Con_Status { get; set; } //Ex: "Agendada", "Realizada", "Cancelada"
 
         [ValidateNever]
         public Pet Pet { get; set; }

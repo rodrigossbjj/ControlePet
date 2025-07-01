@@ -6,8 +6,17 @@
 
 <h1>@ViewData["Title"]</h1>
 
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success">@TempData["MensagemSucesso"]</div>
+}
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger">@TempData["MensagemErro"]</div>
+}
+
 <div class="container-formulario">
-    <form asp-action="Marcar" asp-controller="Consulta" method="post">
+    <form asp-action="Agendar" asp-controller="Consultas" method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
         <div class="grupo-formulario">
@@ -20,9 +29,15 @@
         </div>
 
         <div class="grupo-formulario">
-            <label asp-for="Con_Data" class="control-label">Data e Hora:</label>
-            <input asp-for="Con_Data" type="datetime-local" class="input-formulario" />
+            <label class="control-label">Data:</label>
+            <input asp-for="Con_Data" type="date" class="input-formulario" />
             <span asp-validation-for="Con_Data" class="text-danger"></span>
+        </div>
+
+        <div class="grupo-formulario">
+            <label class="control-label">Hora:</label>
+            <input asp-for="Con_Hora" type="time" class="input-formulario" />
+            <span asp-validation-for="Con_Hora" class="text-danger"></span>
         </div>
 
         <div class="grupo-formulario">
@@ -46,6 +61,13 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+
+    <script>
+        setTimeout(() => {
+            document.querySelectorAll('.alert').forEach(el => el.remove());
+        }, 4000); //4 segundos
+    </script>
+
     <style>
         .text-danger {
             color: #dc3545;
