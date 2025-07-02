@@ -10,7 +10,7 @@ namespace ControlePetWeb.Controllers
         private readonly Context _context;
 
         public ConsultasController(Context context)
-        {   
+        {
             _context = context;
         }
 
@@ -68,34 +68,42 @@ namespace ControlePetWeb.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: Consultas/HistoricoTutores
-        public IActionResult HistoricoTutores(string filtroNome)
+        // GET: Consultas/HistoricoPets
+        public IActionResult HistoricoPets(string filtroNome)
         {
-            var tutoresQuery = _context.Tutores.AsQueryable();
+            var petsQuery = _context.Pets
+                .Include(p => p.Tutor)  // Inclui o tutor para mostrar na lista
+                .AsQueryable();
 
             if (!string.IsNullOrEmpty(filtroNome))
             {
-                tutoresQuery = tutoresQuery.Where(t => t.tut_Nome.Contains(filtroNome));
+                petsQuery = petsQuery.Where(p => p.pet_Nome.Contains(filtroNome));
             }
 
             ViewBag.FiltroNome = filtroNome; // Para manter o filtro na view
-            return View(tutoresQuery.ToList());
+            return View(petsQuery.ToList());
         }
 
-        // GET: Consultas/HistoricoPorTutor/5
-        public IActionResult HistoricoPorTutor(int tutorId)
+        // GET: Consultas/HistoricoPorPet/5
+        public IActionResult HistoricoPorPet(int petId)
         {
-            var tutor = _context.Tutores
-                .Include(t => t.Pets)
-                    .ThenInclude(p => p.Consultas)
-                .FirstOrDefault(t => t.tut_Id == tutorId);
+            var pet = _context.Pets
+                .Include(p => p.Consultas)
+                    .ThenInclude(c => c.Pet)
+                .Include(p => p.Tutor)  // Inclui o tutor para mostrar na view
+                .FirstOrDefault(p => p.pet_Id == petId);
 
-            if (tutor == null)
+            if (pet == null)
             {
                 return NotFound();
             }
 
-            return View(tutor);
+            // Ordena as consultas por data decrescente
+            pet.Consultas = pet.Consultas
+                .OrderByDescending(c => c.Con_Data)
+                .ToList();
+
+            return View(pet);
         }
     }
 }
