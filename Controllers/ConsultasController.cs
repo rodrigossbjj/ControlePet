@@ -67,5 +67,35 @@ namespace ControlePetWeb.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        // GET: Consultas/HistoricoTutores
+        public IActionResult HistoricoTutores(string filtroNome)
+        {
+            var tutoresQuery = _context.Tutores.AsQueryable();
+
+            if (!string.IsNullOrEmpty(filtroNome))
+            {
+                tutoresQuery = tutoresQuery.Where(t => t.tut_Nome.Contains(filtroNome));
+            }
+
+            ViewBag.FiltroNome = filtroNome; // Para manter o filtro na view
+            return View(tutoresQuery.ToList());
+        }
+
+        // GET: Consultas/HistoricoPorTutor/5
+        public IActionResult HistoricoPorTutor(int tutorId)
+        {
+            var tutor = _context.Tutores
+                .Include(t => t.Pets)
+                    .ThenInclude(p => p.Consultas)
+                .FirstOrDefault(t => t.tut_Id == tutorId);
+
+            if (tutor == null)
+            {
+                return NotFound();
+            }
+
+            return View(tutor);
+        }
     }
 }

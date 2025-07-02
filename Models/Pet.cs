@@ -39,6 +39,8 @@ namespace ControlePetWeb.Models
 
         public bool pet_Ativo { get; set; } = true;
 
+        public ICollection<Consulta> Consultas { get; set; } = new List<Consulta>();
+
         //ForingKey para o Tutor
         [Required(ErrorMessage = "É necessário selecionar um tutor.")]
         [ForeignKey("Tutor")]
