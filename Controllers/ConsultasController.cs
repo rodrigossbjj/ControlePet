@@ -50,7 +50,7 @@ namespace ControlePetWeb.Controllers
                 .OrderByDescending(c => c.Con_Data)
                 .ToListAsync();
 
-            return View(consultas);
+            return View("~/Views/Consulta/Index.cshtml", consultas);
         }
 
         // GET: Consultas/Cancelar/5

@@ -1,33 +1,46 @@
 ﻿@{
-    ViewData["Title"] = "Página Inicial";
+    ViewData["Title"] = "Página Inicial - CuidaPet";
+    Layout = null; // Layout nulo, esta página tem seu próprio cabeçalho e estrutura
 }
 
-@{
-    Layout = null;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="icon" type="image/png" href="/imagens/icon.png"> @* Favicon consistente *@
+</head>
+<body>
 
-<header>
-    <link rel="stylesheet" href="~/css/style.css" />
-    <div class="cabecalho-esquerda">
-        <div class="logo">
-            <img src="~/imagens/logo.png" alt="Logo MeuPET">
+    <header class="pagina-inicial-header">
+        @* Usando a nova classe para o header da página inicial *@
+        <div class="cabecalho-esquerda">
+            <div class="logo">
+                <img src="~/imagens/logo.png" alt="Logo CuidaPet">
+            </div>
+            <h1>CuidaPet</h1>
         </div>
-        <h1>CuidaPet</h1>
-    </div>
-    <div class="atalhos-topo">
-        <a asp-controller="Login" asp-action="Index" class="botao-cabecalho">Login</a>
-        <a asp-controller="Cadastro" asp-action="Index" class="botao-cabecalho">Cadastrar</a>
-    </div>
-</header>
+        <div class="atalhos-topo">
+            <a asp-controller="Login" asp-action="Index" class="botao-cabecalho">Login</a>
+            <a asp-controller="Cadastro" asp-action="Index" class="botao-cabecalho">Cadastrar</a>
+        </div>
+    </header>
 
-<main>
-    <section class="conteudo-esquerdo">
-        <h2>Facilidade para gerenciar seu negócio</h2>
-        <p>
-            Gerencie todos os aspectos do cuidado com os animais de estimação<br>
-            de seus clientes em uma única plataforma integrada e fácil de usar.
-        </p>
-        <p class="texto-parede">Junte-se a milhares de clínicas veterinárias</p>
-    </section>
+    <main class="pagina-inicial-main">
+        @* Usando a nova classe para o main da página inicial *@
+        <section class="conteudo-esquerdo">
+            <h2>Facilidade para gerenciar seu negócio</h2>
+            <p>
+                Gerencie todos os aspectos do cuidado com os animais de estimação<br>
+                de seus clientes em uma única plataforma integrada e fácil de usar.
+            </p>
+            <p class="texto-parede">Junte-se a milhares de clínicas veterinárias</p>
+        </section>
+        @* A área de login que estava no seu style.css original geralmente fica aqui ou em outra view,
+           mas como a imagem de referência não a mostra na página inicial, mantemos a estrutura atual. *@
+    </main>
 
-</main>
+</body>
+</html>

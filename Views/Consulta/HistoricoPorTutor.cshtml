@@ -1,0 +1,95 @@
+﻿@model ControlePetWeb.Models.Tutor
+@{
+    ViewData["Title"] = "Histórico de Consultas de " + Model.tut_Nome;
+    Layout = "~/Views/Shared/_MenuAgenda.cshtml";
+}
+
+<h1>Histórico de Consultas - @Model.tut_Nome</h1>
+
+<div class="container-informacoes mb-4">
+    <h2><i class="fas fa-user-circle"></i> Dados do Tutor</h2>
+    <div class="detalhes-tutor detalhes-consulta">
+        @* Reutilizando classes para estilização de detalhes *@
+        <span><i class="fas fa-envelope"></i> E-mail: @Model.tut_Email</span>
+        <span><i class="fas fa-phone"></i> Telefone: @Model.tut_Telefone</span>
+        <span><i class="fas fa-paw"></i> Total de Pets Registrados: @Model.Pets?.Count ?? 0</span>
+    </div>
+</div>
+
+@if (Model.Pets != null && Model.Pets.Any())
+{
+    @foreach (var pet in Model.Pets)
+    {
+        <div class="container-informacoes mb-4">
+            <h2><i class="fas fa-paw"></i> Histórico de @pet.pet_Nome</h2>
+            @if (pet.Consultas != null && pet.Consultas.Any())
+            {
+                <div class="lista-consultas">
+                    @foreach (var consulta in pet.Consultas.OrderByDescending(c => c.Con_Data).ThenByDescending(c => c.Con_Hora)) @* Ordena consultas por data e hora decrescente *@
+                    {
+                        <div class="cartao-consulta">
+                            <div class="cabecalho-consulta">
+                                <span class="nome-pet">Consulta de @pet.pet_Nome</span>
+                                <span class="tipo-consulta @(consulta.Con_Descricao?.ToLower().Contains("vacina") == true ? "vacina" :
+                                                            consulta.Con_Descricao?.ToLower().Contains("emergencia") == true ? "emergencia" :
+                                                            consulta.Con_Descricao?.ToLower().Contains("rotina") == true ? "rotina" :
+                                                            consulta.Con_Descricao?.ToLower().Contains("cirurgia") == true ? "cirurgia" : "outros")">
+                                    @consulta.Con_Descricao @* Exibe a descrição como tipo de consulta *@
+                                </span>
+                            </div>
+                            <div class="detalhes-consulta">
+                                <span><i class="fas fa-calendar-alt"></i> Data: @consulta.Con_Data.ToString("dd/MM/yyyy") - Hora: @consulta.Con_Hora.ToString(@"hh\:mm")</span>
+                                <span><i class="fas fa-info-circle"></i> Status: @consulta.Con_Status</span>
+                                @if (!string.IsNullOrEmpty(consulta.Con_Descricao))
+                                {
+                                    <span><i class="fas fa-clipboard"></i> Motivo: @consulta.Con_Descricao</span>
+                                }
+                            </div>
+                            <div class="acoes-consulta mt-3">
+                                @if (consulta.Con_Status != "Cancelada" && consulta.Con_Data > DateTime.Today)
+                                {
+                                    <a asp-action="Cancelar" asp-controller="Consultas" asp-route-id="@consulta.Con_Id" class="botao-confirmar"
+                                       onclick="return confirm('Tem certeza que deseja cancelar esta consulta?');"
+                                       style="background-color: var(--emergencia);">
+                                        <i class="fas fa-times-circle"></i> Cancelar
+                                    </a>
+                                }
+                                else if (consulta.Con_Status == "Cancelada")
+                                {
+                                    <span class="text-danger"><i class="fas fa-ban"></i> Consulta Cancelada</span>
+                                }
+                                else if (consulta.Con_Data <= DateTime.Today && consulta.Con_Status != "Realizada")
+                                {
+                                    <span style="color: var(--texto-claro); font-weight: 500;"><i class="fas fa-check-circle"></i> Consulta Finalizada (Ação pendente)</span>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="placeholder small-placeholder">
+                    <i class="fas fa-folder-open"></i>
+                    <p>Nenhuma consulta encontrada para @pet.pet_Nome.</p>
+                </div>
+            }
+        </div>
+    }
+}
+else
+{
+    <div class="container-informacoes">
+        <div class="placeholder">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Este tutor não possui pets cadastrados ou não há histórico de consultas.</p>
+            <a asp-controller="Pets" asp-action="CadastrarPet" class="botao-confirmar">Cadastrar Novo Pet</a>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

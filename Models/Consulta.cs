@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ControlePetWeb.Models
 {
@@ -9,6 +10,7 @@ namespace ControlePetWeb.Models
         public int Con_Id { get; set; }
 
         [Required]
+        [Column("pet_id")]
         public int Con_PetId { get; set; }
 
         [Required]
@@ -24,5 +26,4 @@ namespace ControlePetWeb.Models
         [ValidateNever]
         public Pet Pet { get; set; }
     }
-
 }

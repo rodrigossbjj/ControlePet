@@ -6,7 +6,6 @@
 
 <h1>@ViewData["Title"]</h1>
 
-{{-- Seletor de Pet - Sempre visível inicialmente --}}
 <div id="seletor-pet" class="container-seletor">
     <h3><i class="fas fa-search"></i> Selecione um Pet para Alterar</h3>
     <select class="seletor-form" id="lista-pets">
@@ -28,10 +27,9 @@
     <button type="button" class="botao-confirmar" id="btnCarregarPet">Carregar</button>
 </div>
 
-{{-- Formulário de Edição de Pet - Oculto inicialmente --}}
 <div id="form-alterar-pet" class="container-formulario" style="display:none;">
     <h3>Dados do Pet</h3>
-    <form asp-action="Edit" asp-controller="Pets" method="post">
+    <form asp-action="Index" asp-controller="Pets" method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <input type="hidden" asp-for="pet_Id" />
         <input type="hidden" asp-for="pet_Ativo" />
@@ -119,7 +117,7 @@
             $('#btnCarregarPet').on('click', function () {
                 var petId = $('#lista-pets').val();
                 if (petId) {
-                    window.location.href = '@Url.Action("Edit", "Pets")/' + petId;
+                    window.location.href = '@Url.Action("Index", "Pets")' + '?id=' + petId;
                 } else {
                     alert('Por favor, selecione um pet para alterar.');
                 }
@@ -128,10 +126,10 @@
 
         @if (Model != null && Model.pet_Id > 0)
         {
-                    <text>
-                    $('#lista-pets').val(@Model.pet_Id);
-                    $('#form-alterar-pet').show();
-                    </text>
+            <text>
+                        $('#lista-pets').val(@Model.pet_Id);
+                        $('#form-alterar-pet').show();
+            </text>
         }
         });
     </script>

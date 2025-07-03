@@ -8,6 +8,7 @@ namespace ControlePetWeb.Models
     public class Pet
     {
         [Key]
+        [Column("pet_id")]
         public int pet_Id { get; set; }
 
         [Required(ErrorMessage = "O nome do pet é obrigatório.")]

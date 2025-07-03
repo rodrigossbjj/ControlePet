@@ -1,19 +1,31 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ControlePetWeb</title>
+    <title>@ViewData["Title"] - CuidaPet</title>
     <link rel="stylesheet" href="~/css/style2.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="/imagens/icon.png"> @* Adicionando um ícone para a aba do navegador *@
 </head>
 <body>
-    <header>
-        <div class="cabecalho-esquerda">
-            <div class="logo">
-                <img src="~/imagens/logo.png" alt="Logo VetBase">
+    <header class="main-header">
+        @* Adicionando uma classe para estilização do cabeçalho global *@
+        <div class="header-content">
+            @* Novo div para organizar o conteúdo do cabeçalho *@
+            <div class="cabecalho-esquerda">
+                <div class="logo">
+                    <img src="~/imagens/logo.png" alt="Logo CuidaPet">
+                </div>
+                <h1>CuidaPet</h1>
             </div>
-            <h1>CuidaPet</h1>
+            @* Adicionar aqui elementos do cabeçalho global, como o "JOSE" e o menu de usuário, se aplicável, no futuro *@
+            <div class="header-right-actions">
+                @* Exemplo de um link de sair, pode ser ajustado conforme a autenticação *@
+                <a asp-controller="Login" asp-action="Sair" class="btn btn-outline-light header-logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </div>
         </div>
     </header>
 
@@ -23,7 +35,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - ControlePetWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - CuidaPet - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
         </div>
     </footer>
 

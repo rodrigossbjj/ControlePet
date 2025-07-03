@@ -1,20 +1,24 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primaria: #6f90c4;
-    --primaria-escura: #305da7;
-    --secundaria: #3498db;
-    --texto: #083d3c;
-    --texto-claro: #6c757d;
-    --fundo-claro: #f8f9fa;
-    --fundo-cartao: #ffffff;
-    --borda: #e0e0e0;
+    --primaria: #347CDB; /* Azul mais vibrante para destaque principal */
+    --primaria-escura: #2A63B5; /* Tom mais escuro para hover */
+    --secundaria: #1ABC9C; /* Verde água para ações de sucesso/confirmação */
+    --secundaria-escura: #159B80; /* Hover da secundária */
+    --texto: #333333; /* Cinza escuro para texto principal */
+    --texto-claro: #6c757d; /* Cinza mais claro para texto secundário */
+    --fundo-claro: #F4F7F6; /* Fundo geral da página, mais suave */
+    --fundo-cartao: #ffffff; /* Fundo dos cards */
+    --borda: #e0e0e0; /* Cor da borda padrão */
+    --sombra-leve: 0 4px 12px rgba(0,0,0,0.08); /* Sombra padrão para cards */
+    /* Cores específicas para tipos de consulta, mantendo as suas definidas */
     --emergencia: #dc3545;
     --vacina: #17a2b8;
     --rotina: #28a745;
     --cirurgia: #6f42c1;
 }
 
+/* Base */
 * {
     margin: 0;
     padding: 0;
@@ -28,18 +32,22 @@ body {
     min-height: 100vh;
 }
 
-header {
-    display: flex;
-    align-items: center;
+/* Cabeçalho Global (Aplicado ao _Layout.cshtml) */
+.main-header {
     background-color: var(--primaria);
     padding: 15px 30px;
     color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: var(--sombra-leve);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Para alinhar logo à esquerda e ações à direita */
 }
 
-.logo img {
-    border-radius: 50%;
-    height: 50px;
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ocupa todo o espaço para alinhar os extremos */
+    justify-content: space-between;
 }
 
 .cabecalho-esquerda {
@@ -53,56 +61,74 @@ header {
         font-weight: 600;
     }
 
+.logo img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px; /* Adicionado largura para consistência */
+    object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+}
+
+.header-right-actions .btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+    .header-right-actions .btn:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        transform: translateY(-1px);
+    }
+
+/* Container Principal para o Dashboard/Painel */
 .container-principal {
+    display: flex; /* Permite que painel-acoes e painel-direito fiquem lado a lado */
     padding: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1600px; /* Aumenta a largura máxima para se aproximar do dashboard */
+    margin: 20px auto; /* Centraliza e adiciona espaço acima/abaixo */
+    gap: 30px; /* Espaço entre os painéis */
+    align-items: flex-start; /* Alinha os itens ao topo */
 }
 
 .painel-conteudo {
     display: flex;
     gap: 30px;
     margin-bottom: 30px;
+    flex: 1; /* Ocupa o restante do espaço disponível */
 }
 
+/* Painel de Ações (Sidebar) */
 .painel-acoes {
-    flex: 0 0 300px;
+    flex: 0 0 280px; /* Largura fixa para a sidebar */
     background-color: var(--fundo-cartao);
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: var(--sombra-leve);
+    height: fit-content; /* Ajusta a altura ao conteúdo */
+    position: sticky; /* Mantém a sidebar visível ao rolar */
+    top: 20px; /* Distância do topo */
 }
 
-.painel-direito {
-    flex: 1;
-    min-height: 500px;
-}
-
-h2 {
-    color: var(--primaria);
-    margin: 20px 0 15px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-    h2 i {
-        font-size: 18px;
+    .painel-acoes h2 {
+        color: var(--primaria);
+        margin-bottom: 20px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--borda);
     }
 
-h3 {
-    color: var(--primaria);
-    margin-bottom: 15px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
 .botoes-acao {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex; /* Mudado para flex para alinhar os botões verticalmente */
+    flex-direction: column; /* Organiza os itens em coluna */
     gap: 12px;
     margin-bottom: 25px;
 }
@@ -111,104 +137,284 @@ h3 {
     display: flex;
     align-items: center;
     gap: 12px;
-    background-color: var(--primaria);
-    color: white;
+    background-color: transparent; /* Fundo transparente */
+    color: var(--texto); /* Texto escuro */
     border: none;
     border-radius: 10px;
     padding: 12px 15px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px; /* Aumentado para melhor legibilidade no menu */
+    font-weight: 500;
 }
 
-    .botao-acao:hover {
-        background-color: var(--primaria-escura);
-        transform: translateY(-2px);
-        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    .botao-acao i {
+        font-size: 18px; /* Tamanho do ícone */
+        color: var(--primaria); /* Cor do ícone */
     }
 
-.seletor-form {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid var(--borda);
-    border-radius: 10px;
-    background-color: var(--fundo-claro);
-    font-size: 14px;
+    .botao-acao:hover {
+        background-color: var(--primaria-escura); /* Fundo azul no hover */
+        color: white; /* Texto branco no hover */
+        transform: none; /* Remover translateY */
+        box-shadow: none; /* Remover box-shadow */
+    }
+
+        .botao-acao:hover i {
+            color: white; /* Ícone branco no hover */
+        }
+
+
+/* Painel Direito (Conteúdo Principal) */
+.painel-direito {
+    flex: 1; /* Ocupa o restante do espaço horizontal */
+    min-height: 500px; /* Garante uma altura mínima */
 }
 
-input[type="datetime-local"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid var(--borda);
-    border-radius: 10px;
-    background-color: var(--fundo-claro);
-    font-size: 14px;
+/* Títulos das Seções dentro do painel direito ou cards */
+h1 {
+    color: var(--primaria);
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center; /* Centraliza o título principal */
 }
 
+h2 {
+    color: var(--primaria);
+    margin: 20px 0 15px;
+    font-size: 22px; /* Ligeiramente maior que os títulos de sidebar */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 8px; /* Pequeno espaçamento para o border-bottom */
+    border-bottom: 1px solid var(--borda); /* Linha abaixo dos títulos de seção */
+}
+
+    h2 i {
+        font-size: 20px;
+        color: var(--primaria);
+    }
+
+h3 {
+    color: var(--primaria-escura); /* Um tom de azul diferente para subtítulos */
+    margin-bottom: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Cards de Conteúdo (Aplicado a formulários, informações, etc.) */
+.container-formulario, .container-seletor, .container-informacoes {
+    background-color: var(--fundo-cartao);
+    border-radius: 15px;
+    padding: 30px; /* Aumenta um pouco o padding */
+    box-shadow: var(--sombra-leve);
+    margin-bottom: 25px; /* Espaço entre os cards */
+}
+
+/* Elementos de Formulário */
+.grupo-formulario {
+    margin-bottom: 20px; /* Espaço entre os grupos de campo */
+}
+
+    .grupo-formulario label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--texto);
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+.input-formulario,
+.seletor-form,
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background-color: var(--fundo-claro); /* Fundo dos inputs */
+    font-size: 15px;
+    color: var(--texto);
+    transition: all 0.3s ease;
+}
+
+    .input-formulario:focus,
+    .seletor-form:focus,
+    input[type="date"]:focus,
+    input[type="time"]:focus,
+    textarea:focus {
+        outline: none;
+        border-color: var(--primaria);
+        box-shadow: 0 0 0 3px rgba(52, 124, 219, 0.15); /* Sombra ao focar */
+        background-color: white;
+    }
+
+.textarea-formulario {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Botões de Confirmação/Envio */
 .botao-confirmar {
-    background-color: var(--secundaria);
+    background-color: var(--primaria);
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 12px 20px;
+    padding: 12px 25px; /* Aumentado um pouco o padding */
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex; /* Para permitir ícones no futuro e alinhamento */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
     .botao-confirmar:hover {
-        background-color: var(--secundaria-escura);
+        background-color: var(--primaria-escura);
         transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-.agenda-section {
-    margin-top: 40px;
+/* Checkbox (para Castrado, Termos, etc.) */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px; /* Ajuste o margin-bottom para não conflitar com .grupo-formulario */
 }
+
+    .checkbox-group input[type="checkbox"] {
+        width: auto;
+        margin-top: 0;
+        transform: scale(1.2); /* Aumenta um pouco o tamanho do checkbox */
+        accent-color: var(--primaria); /* Muda a cor do checkbox nativo para o azul primário */
+    }
+
+    .checkbox-group label {
+        font-weight: normal; /* Labels de checkbox geralmente não são bold */
+        margin-bottom: 0;
+        color: var(--texto);
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+/* Mensagens de Validação e Alerta */
+.text-danger {
+    color: var(--emergencia); /* Cor vermelha para erros */
+    font-size: 0.875em;
+    margin-top: 5px;
+    display: block;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* Seção de Agenda no _MenuAgenda.cshtml */
+.secao-agenda {
+    background-color: var(--fundo-cartao);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: var(--sombra-leve);
+    margin-top: 25px; /* Espaço acima da seção de agenda */
+}
+
+    .secao-agenda h2 {
+        margin-top: 0; /* Remove margin-top extra */
+    }
 
 .lista-consultas {
     margin-top: 20px;
 }
 
 .cartao-consulta {
-    background-color: var(--fundo-cartao);
+    background-color: var(--fundo-claro); /* Fundo mais claro para se diferenciar do fundo do painel */
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 10px; /* Bordas ligeiramente menos arredondadas que o card principal */
     margin-bottom: 15px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra mais sutil para itens internos */
+    border: 1px solid var(--borda); /* Borda sutil */
 }
 
     .cartao-consulta .cabecalho-consulta {
         display: flex;
         justify-content: space-between;
+        align-items: center; /* Alinha verticalmente os itens */
         margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 1px dashed var(--borda); /* Linha tracejada */
     }
+
+.nome-pet {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primaria-escura);
+}
 
 .tipo-consulta {
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 8px; /* Bordas um pouco menos arredondadas */
     color: white;
-    font-size: 12px;
+    font-size: 13px; /* Um pouco maior */
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-    .tipo-consulta.vacina {
-        background-color: var(--vacina);
+.detalhes-consulta {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: var(--texto-claro);
+}
+
+    .detalhes-consulta span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 
-    .tipo-consulta.emergencia {
-        background-color: var(--emergencia);
+    .detalhes-consulta i {
+        font-size: 16px;
+        color: var(--primaria);
     }
 
-    .tipo-consulta.rotina {
-        background-color: var(--rotina);
-    }
+/* Estilos para Pagina Inicial (Login/Cadastro de entrada) - Manter o style.css */
+/* O style.css e styleCadastrar.css precisam ser ajustados individualmente,
+   ou podemos refatorar para que o style2.css seja o principal
+   e os outros complementem ou substituam apenas onde necessário.
+   Por enquanto, vamos assumir que o style2.css é para o painel interno.
+*/
 
-    .tipo-consulta.cirurgia {
-        background-color: var(--cirurgia);
-    }
-
-/* Adicionado para o rodapé flutuar corretamente */
+/* Rodapé */
 .footer {
     position: relative; /* Mudado de absolute para relative, pois o main-content-wrapper já deve empurrar */
     bottom: 0;
@@ -216,7 +422,100 @@ input[type="datetime-local"], textarea {
     white-space: nowrap;
     line-height: 60px;
     text-align: center;
-    background-color: var(--fundo-claro); /* Cor de fundo para o rodapé */
+    background-color: var(--fundo-cartao); /* Cor de fundo para o rodapé */
     border-top: 1px solid var(--borda);
-    margin-top: 20px; /* Adiciona um pouco de espaço acima do rodapé */
+    margin-top: 40px; /* Mais espaço acima do rodapé */
+    color: var(--texto-claro);
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.03); /* Sombra sutil para o rodapé */
 }
+
+/* Placeholder para informações do pet na tela inicial após login */
+.container-informacoes .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* Altura mínima para o placeholder */
+    color: var(--texto-claro);
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+}
+
+    .container-informacoes .placeholder i {
+        font-size: 60px; /* Tamanho do ícone da pata */
+        margin-bottom: 20px;
+        color: var(--borda); /* Cor do ícone mais suave */
+    }
+
+/* Media Queries para Responsividade (melhorar depois) */
+@media (max-width: 992px) {
+    .container-principal {
+        flex-direction: column; /* Coloca os painéis um abaixo do outro em telas menores */
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .painel-acoes {
+        flex: 0 0 auto; /* Remove largura fixa */
+        width: 100%; /* Ocupa toda a largura */
+        margin-bottom: 20px;
+        position: static; /* Remove sticky em telas menores */
+    }
+
+    .main-header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-right-actions {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .container-formulario, .container-seletor, .container-informacoes, .secao-agenda {
+        padding: 20px;
+    }
+
+    .main-header {
+        padding: 10px 15px;
+    }
+
+    .cabecalho-esquerda h1 {
+        font-size: 20px;
+    }
+
+    .logo img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+/* No final do style2.css, ou próximo ao .placeholder */
+.placeholder.small-placeholder {
+    min-height: 150px; /* Altura menor */
+    font-size: 16px;
+    padding: 15px;
+}
+
+    .placeholder.small-placeholder i {
+        font-size: 40px; /* Ícone menor */
+        margin-bottom: 15px;
+    }

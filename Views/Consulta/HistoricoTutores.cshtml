@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ControlePetWeb.Models.Tutor>
+@{
+    ViewData["Title"] = "Histórico de Consultas por Tutor";
+    Layout = "~/Views/Shared/_MenuAgenda.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container-seletor mb-4">
+    @* Usando container-seletor para o card de busca *@
+    <h3><i class="fas fa-filter"></i> Filtrar Tutores</h3>
+    <form asp-action="HistoricoTutores" method="get" class="d-flex align-items-end gap-3">
+        @* Usando flex para alinhar input e botão *@
+        <div class="grupo-formulario flex-grow-1 mb-0">
+            @* flex-grow-1 para o input ocupar mais espaço *@
+            <label for="filtroNome" class="control-label">Buscar por Nome do Tutor:</label>
+            <input type="text" id="filtroNome" name="filtroNome" class="input-formulario"
+                   placeholder="Digite o nome do tutor..." value="@ViewBag.FiltroNome" />
+        </div>
+        <button type="submit" class="botao-confirmar">
+            <i class="fas fa-search"></i> Buscar
+        </button>
+    </form>
+</div>
+
+
+<div class="container-informacoes">
+    @if (Model != null && Model.Any())
+    {
+        <h2><i class="fas fa-users"></i> Tutores Cadastrados</h2>
+        <div class="lista-tutores">
+            @* Nova classe para listar tutores *@
+            @foreach (var tutor in Model)
+            {
+                <div class="cartao-tutor cartao-consulta">
+                    @* Reutilizando estilos de cartao-consulta *@
+                    <div class="cabecalho-consulta">
+                        <span class="nome-tutor">@tutor.tut_Nome</span>
+                        <span class="email-tutor"><i class="fas fa-envelope"></i> @tutor.tut_Email</span>
+                    </div>
+                    <div class="detalhes-tutor detalhes-consulta">
+                        <span><i class="fas fa-phone"></i> @tutor.tut_Telefone</span>
+                        <span><i class="fas fa-paw"></i> Pets Cadastrados: @tutor.Pets?.Count ?? 0</span>
+                    </div>
+                    <div class="acoes-tutor mt-3">
+                        <a asp-action="HistoricoPorTutor" asp-controller="Consultas" asp-route-tutorId="@tutor.tut_Id" class="botao-confirmar">
+                            <i class="fas fa-eye"></i> Ver Histórico
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="placeholder">
+            <i class="fas fa-frown"></i>
+            <p>Nenhum tutor encontrado com o filtro aplicado.</p>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

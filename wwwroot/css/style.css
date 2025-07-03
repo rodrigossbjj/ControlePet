@@ -13,6 +13,10 @@ body {
     min-height: 100vh;
     color: #0d1b2a;
     position: relative;
+    display: flex; /* Adicionado para centralizar conteúdo */
+    justify-content: center; /* Adicionado para centralizar conteúdo */
+    align-items: center; /* Adicionado para centralizar conteúdo */
+    flex-direction: column; /* Para empilhar o header e o main */
 }
 
     body::before {
@@ -26,64 +30,71 @@ body {
         z-index: -1;
     }
 
-header {
+/* Header na Página Inicial (PaginaInicial/Index) */
+header.pagina-inicial-header { /* Nova classe para diferenciar */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 30px;
     color: white;
+    width: 100%; /* Ocupa toda a largura */
+    position: absolute; /* Fixa no topo */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Garante que fique acima de outros elementos */
 }
 
-.logo img {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    padding: 5px;
-    background-color: white;
-}
-
-.cabecalho-esquerda {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-    .cabecalho-esquerda h1 {
-        font-size: 28px;
-        font-weight: 600;
-        color: #ffffff;
+    header.pagina-inicial-header .logo img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        padding: 5px;
+        background-color: white;
     }
 
-.atalhos-topo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.botao-cabecalho {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 8px 16px;
-    font-size: 14px;
-    transition: all 0.3s;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-    .botao-cabecalho:hover {
-        background-color: rgba(255, 255, 255, 0.25);
-        transform: translateY(-2px);
+    header.pagina-inicial-header .cabecalho-esquerda {
+        display: flex;
+        align-items: center;
+        gap: 15px;
     }
 
-main {
+        header.pagina-inicial-header .cabecalho-esquerda h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+    header.pagina-inicial-header .atalhos-topo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    header.pagina-inicial-header .botao-cabecalho {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 16px;
+        font-size: 14px;
+        transition: all 0.3s;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+        header.pagina-inicial-header .botao-cabecalho:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+main.pagina-inicial-main { /* Nova classe para diferenciar */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
-    min-height: calc(100vh - 90px);
+    min-height: calc(100vh - 90px); /* Ajustado para considerar o header */
+    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
 }
 
 .conteudo-esquerdo {
@@ -113,25 +124,43 @@ main {
     opacity: 0.9;
 }
 
-.area-login {
+/* Área de Login/Recuperação/Validação/Redefinição de Senha */
+.area-login, .password-card, .code-card { /* Unificado para usar o mesmo estilo de card */
     background-color: rgba(255, 255, 255, 0.97);
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     width: 380px;
     padding: 40px;
     text-align: center;
+    margin-top: 50px; /* Adiciona margem para não ficar colado no header se for usado com ele */
 }
 
-    .area-login h2 {
+    .area-login h2, .password-card h2, .code-card h2 {
         color: #1565c0;
         font-size: 26px;
         margin-bottom: 30px;
         font-weight: 600;
     }
 
-.grupo-campo {
+.paw-heart { /* Estilo da pata com coração, comum às telas de auth */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .paw-heart svg {
+        width: 80px;
+        height: 80px;
+    }
+
+        .paw-heart svg path {
+            fill: #5E8FCF; /* Garante a cor azul para a pata/coração */
+        }
+
+
+.grupo-campo { /* Para inputs de login, etc. */
     margin-bottom: 20px;
     text-align: left;
+    position: relative; /* Para posicionar ícones */
 }
 
     .grupo-campo label {
@@ -150,6 +179,8 @@ main {
         font-size: 14px;
         transition: all 0.3s;
         background-color: #f5f5f5;
+        padding-left: 40px; /* Espaço para o ícone */
+        color: #333; /* Cor do texto do input */
     }
 
         .grupo-campo input:focus {
@@ -158,6 +189,24 @@ main {
             background-color: white;
             box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
         }
+
+    .grupo-campo svg { /* Ícones dentro dos inputs */
+        position: absolute;
+        bottom: 0;
+        left: 10px; /* Posição do ícone */
+        transform: translateY(-50%);
+        height: 20px;
+        color: #777; /* Cor do ícone */
+        width: 2em;
+        z-index: 1; /* Garante que o ícone esteja acima do input */
+    }
+
+    .grupo-campo .eye { /* Ícone do olho para senha */
+        right: 10px;
+        left: auto; /* Anula o left para o olho */
+        cursor: pointer;
+    }
+
 
 .botao-login {
     width: 100%;
@@ -196,8 +245,46 @@ main {
             text-decoration: underline;
         }
 
+.forgot-password-link { /* Nova classe para o link "Esqueci minha senha" */
+    font-size: 0.9rem;
+    text-align: left;
+    display: block;
+    margin-bottom: 15px;
+    color: #616161; /* Cor para o link */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    .forgot-password-link:hover {
+        color: #1565c0;
+        text-decoration: underline;
+    }
+
+/* Estilos para Cadastro (styleCadastrar.css) */
+/* Mantido separado por enquanto, pode ser integrado se desejar */
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+    }
+
+/* Media Queries */
 @media (max-width: 992px) {
-    main {
+    main.pagina-inicial-main {
         flex-direction: column;
         padding: 30px 20px;
     }
@@ -208,17 +295,24 @@ main {
         text-align: center;
     }
 
-    .area-login {
+    .area-login, .password-card, .code-card {
         width: 100%;
         max-width: 400px;
+        margin-top: 20px; /* Reduz margem em telas menores */
+    }
+
+    body {
+        justify-content: flex-start; /* Alinha ao topo em telas pequenas */
+        padding-top: 90px; /* Espaço para o header fixo */
     }
 }
 
 @media (max-width: 576px) {
-    header {
+    header.pagina-inicial-header {
         flex-direction: column;
         padding: 15px;
         gap: 15px;
+        position: static; /* Remove fixed position for small screens */
     }
 
     .cabecalho-esquerda {
@@ -229,5 +323,9 @@ main {
     .atalhos-topo {
         width: 100%;
         justify-content: center;
+    }
+
+    .area-login, .password-card, .code-card {
+        padding: 30px;
     }
 }

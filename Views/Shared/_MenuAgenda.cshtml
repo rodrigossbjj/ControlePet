@@ -4,69 +4,88 @@
 }
 
 <div class="container-principal">
-    <div class="painel-conteudo">
-        <div class="painel-acoes">
-            <h2><i class="fas fa-file-alt"></i> Cadastros</h2>
-            <div class="botoes-acao">
-                <a class="botao-acao" asp-controller="Pets" asp-action="CadastrarPet">
-                    <i class="fas fa-plus"></i>
-                    <span>Cadastrar Pet</span>
-                </a>
-                <a class="botao-acao" asp-area="" asp-controller="Tutores" asp-action="CadastrarTutor">
-                    <i class="fas fa-plus"></i>
-                    <span>Cadastrar Tutor</span>
-                </a>
-            </div>
-
-            <h2><i class="fas fa-edit"></i> Gerenciamento</h2>
-            <div class="botoes-acao">
-                <a class="botao-acao" asp-area="" asp-controller="Pets" asp-action="Index">
-                    <i class="fas fa-pen"></i>
-                    <span>Alterar Pet</span>
-                </a>
-                <a class="botao-acao" asp-area="" asp-controller="Tutores" asp-action="Index">
-                    <i class="fas fa-pen"></i>
-                    <span>Alterar Tutor</span>
-                </a>
-            </div>
-
-            <h2><i class="fas fa-calendar-check"></i> Consultas</h2>
-            <div class="botoes-acao">
-                <a class="botao-acao" asp-area="" asp-controller="Consultas" asp-action="Agendar">
-                    <i class="fas fa-calendar-plus"></i>
-                    <span>Marcar Consulta</span>
-                </a>
-                <a class="botao-acao" asp-area="" asp-controller="Consultas" asp-action="HistoricoPet">
-                    <i class="fas fa-file-medical"></i>
-                    <span>Histórico do Pet</span>
-                </a>
-            </div>
+    <div class="painel-acoes">
+        <h2><i class="fas fa-file-alt"></i> Cadastros</h2>
+        <div class="botoes-acao">
+            <a class="botao-acao" asp-controller="Pets" asp-action="CadastrarPet">
+                <i class="fas fa-plus"></i>
+                <span>Cadastrar Pet</span>
+            </a>
+            <a class="botao-acao" asp-area="" asp-controller="Tutores" asp-action="CadastrarTutor">
+                <i class="fas fa-plus"></i>
+                <span>Cadastrar Tutor</span>
+            </a>
         </div>
 
-        <div class="painel-direito">
-            @RenderBody()
+        <h2><i class="fas fa-edit"></i> Gerenciamento</h2>
+        <div class="botoes-acao">
+            <a class="botao-acao" asp-area="" asp-controller="Pets" asp-action="Index">
+                <i class="fas fa-pen"></i>
+                <span>Alterar Pet</span>
+            </a>
+            <a class="botao-acao" asp-area="" asp-controller="Tutores" asp-action="Index">
+                <i class="fas fa-pen"></i>
+                <span>Alterar Tutor</span>
+            </a>
+        </div>
+
+        <h2><i class="fas fa-calendar-check"></i> Consultas</h2>
+        <div class="botoes-acao">
+            <a class="botao-acao" asp-area="" asp-controller="Consultas" asp-action="Agendar">
+                <i class="fas fa-calendar-plus"></i>
+                <span>Marcar Consulta</span>
+            </a>
+            <a class="botao-acao" asp-area="" asp-controller="Consultas" asp-action="Index">
+                @* Alterado para 'Index' para ver a lista de consultas *@
+                <i class="fas fa-file-medical"></i>
+                <span>Listar Consultas</span>
+            </a>
+            <a class="botao-acao" asp-area="" asp-controller="Consultas" asp-action="HistoricoTutores">
+                @* Adicionado link para Histórico Tutores *@
+                <i class="fas fa-history"></i>
+                <span>Histórico por Tutor</span>
+            </a>
         </div>
     </div>
 
-    <section class="secao-agenda">
-        <h2><i class="fas fa-calendar-day"></i> Agenda</h2>
-        <p>Próximas consultas agendadas</p>
-        <div class="lista-consultas">
-            <div class="cartao-consulta">
-                <div class="cabecalho-consulta">
-                    <span class="nome-pet">Totó</span>
-                    <span class="tipo-consulta vacina">Vacinação</span>
+    <div class="painel-direito">
+        @RenderBody()
+
+        <section class="secao-agenda">
+            <h2><i class="fas fa-calendar-day"></i> Agenda de Hoje</h2> @* Título mais específico *@
+            <p>Próximas consultas agendadas para hoje.</p>
+            <div class="lista-consultas">
+                @* Exemplo estático - será populado dinamicamente no futuro se necessário *@
+                <div class="cartao-consulta">
+                    <div class="cabecalho-consulta">
+                        <span class="nome-pet">Totó</span>
+                        <span class="tipo-consulta vacina">Vacinação</span>
+                    </div>
+                    <div class="detalhes-consulta">
+                        <span><i class="fas fa-calendar-alt"></i> 03/07/2025 - 14:30</span> @* Data atualizada  *@
+                        <span><i class="fas fa-user-md"></i> Dra. Ana Costa</span> @* Ícone de user-md para veterinário *@
+                        <span><i class="fas fa-clipboard"></i> Vacina anual de raiva.</span>
+                    </div>
                 </div>
-                <div class="detalhes-consulta">
-                    <span><i class="fas fa-calendar-alt"></i> 22/04/2023 - 14:30</span>
-                    <span><i class="fas fa-user"></i> Dr. Silva</span>
+                <div class="cartao-consulta">
+                    <div class="cabecalho-consulta">
+                        <span class="nome-pet">Mingau</span>
+                        <span class="tipo-consulta rotina">Rotina</span>
+                    </div>
+                    <div class="detalhes-consulta">
+                        <span><i class="fas fa-calendar-alt"></i> 03/07/2025 - 15:00</span> @* Data atualizada  *@
+                        <span><i class="fas fa-user-md"></i> Dr. João Silva</span>
+                        <span><i class="fas fa-clipboard"></i> Exame de rotina.</span>
+                    </div>
                 </div>
+
             </div>
-        </div>
-    </section>
+    </div>
+</div>
+</section>
+</div>
 </div>
 
 @section Scripts {
     @await RenderSectionAsync("Scripts", required: false)
-
 }

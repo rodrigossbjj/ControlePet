@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ControlePetWeb.Models.Consulta>
+@{
+    ViewData["Title"] = "Listagem de Consultas";
+    Layout = "~/Views/Shared/_MenuAgenda.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container-informacoes">
+    @* Usando container-informacoes para o card principal *@
+    @if (Model != null && Model.Any())
+    {
+        <h2><i class="fas fa-list-alt"></i> Todas as Consultas Agendadas</h2>
+        <div class="lista-consultas">
+            @foreach (var consulta in Model)
+            {
+                <div class="cartao-consulta">
+                    <div class="cabecalho-consulta">
+                        <span class="nome-pet">@consulta.Pet.pet_Nome</span>
+                        <span class="tipo-consulta @(consulta.Con_Descricao?.ToLower().Contains("vacina") == true ? "vacina" :
+                                                    consulta.Con_Descricao?.ToLower().Contains("emergencia") == true ? "emergencia" :
+                                                    consulta.Con_Descricao?.ToLower().Contains("rotina") == true ? "rotina" :
+                                                    consulta.Con_Descricao?.ToLower().Contains("cirurgia") == true ? "cirurgia" : "outros")">
+                            @consulta.Con_Descricao
+                        </span>
+                    </div>
+                    <div class="detalhes-consulta">
+                        <span><i class="fas fa-calendar-alt"></i> @consulta.Con_Data.ToString("dd/MM/yyyy") - @consulta.Con_Hora.ToString(@"hh\:mm")</span>
+                        <span><i class="fas fa-user-tag"></i> Tutor: @consulta.Pet.Tutor.tut_Nome</span> @* Adicionado nome do tutor *@
+                        <span><i class="fas fa-info-circle"></i> Status: @consulta.Con_Status</span>
+                        @if (!string.IsNullOrEmpty(consulta.Con_Descricao))
+                        {
+                            <span><i class="fas fa-clipboard"></i> Descrição: @consulta.Con_Descricao</span>
+                        }
+                    </div>
+                    <div class="acoes-consulta mt-3">
+                        @* Nova div para ações *@
+                        @if (consulta.Con_Status != "Cancelada" && consulta.Con_Data > DateTime.Today) @* Só permite cancelar se não estiver cancelada e a data for futura **@
+                        {
+                            <a asp-action="Cancelar" asp-controller="Consultas" asp-route-id="@consulta.Con_Id" class="botao-confirmar"
+                               onclick="return confirm('Tem certeza que deseja cancelar esta consulta?');"
+                               style="background-color: var(--emergencia);">
+                                <i class="fas fa-times-circle"></i> Cancelar
+                            </a>
+                        }
+                        else if (consulta.Con_Status == "Cancelada")
+                        {
+                            <span class="text-danger"><i class="fas fa-ban"></i> Consulta Cancelada</span>
+                        }
+                        else if (consulta.Con_Data <= DateTime.Today && consulta.Con_Status != "Realizada") @* Pode adicionar botão para marcar como realizada **@
+                        {
+                            <span style="color: var(--texto-claro); font-weight: 500;"><i class="fas fa-check-circle"></i> Consulta Finalizada (Ação pendente)</span>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="placeholder">
+            <i class="fas fa-calendar-times"></i>
+            <p>Nenhuma consulta agendada encontrada.</p>
+            <a asp-action="Agendar" class="botao-confirmar">Agendar Nova Consulta</a>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

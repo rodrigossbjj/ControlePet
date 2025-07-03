@@ -1,4 +1,3 @@
-
 @model Tutor
 @{
     ViewData["Title"] = "Cadastrar Novo Tutor";
@@ -39,12 +38,5 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-    <style>
-        .text-danger {
-            color: #dc3545; /* Cor para mensagens de validação */
-            font-size: 0.875em;
-            margin-top: 5px;
-            display: block; /* Para garantir que o span ocupe uma nova linha */
-        }
-    </style>
+    @* O estilo de text-danger foi movido para style2.css, não é mais necessário aqui. *@
 }
