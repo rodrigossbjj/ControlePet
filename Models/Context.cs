@@ -46,11 +46,16 @@ namespace ControlePetWeb.Models
                 .HasForeignKey(p => p.pet_TutorId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<Pet>()
+                .Property(p => p.pet_Id)
+                .HasColumnName("pet_Id");
+
             //Relação N:1 um pet pode ter N consultas agendadas
             modelBuilder.Entity<Consulta>()
                 .HasOne(c => c.Pet)
-                .WithMany()
+                .WithMany(p => p.Consultas)
                 .HasForeignKey(c => c.Con_PetId)
+                .HasPrincipalKey(p => p.pet_Id)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

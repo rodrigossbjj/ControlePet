@@ -45,13 +45,13 @@ public class LoginController : Controller
         await HttpContext.SignInAsync(new ClaimsPrincipal(identity));
 
         // 3. Redireciona PARA O CONTROLLER CORRETO
-        return RedirectToAction("Index", "Inicio"); // ⚠️ Confirme se "Inicio" é o controller certo
+        return RedirectToAction("Index", "Inicio"); 
     }
 
     [HttpPost]
     public async Task<IActionResult> Sair()
     {
-        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        return RedirectToAction("Index", "Login"); // Corrigido para redirecionar para Index
+        //await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        return RedirectToAction("~/Views/Inicio/Index.cshtml"); // Corrigido para redirecionar para Index
     }
 }

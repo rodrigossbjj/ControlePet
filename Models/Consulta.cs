@@ -10,7 +10,6 @@ namespace ControlePetWeb.Models
         public int Con_Id { get; set; }
 
         [Required]
-        [Column("pet_id")]
         public int Con_PetId { get; set; }
 
         [Required]
@@ -23,6 +22,7 @@ namespace ControlePetWeb.Models
 
         public string? Con_Status { get; set; } //Ex: "Agendada", "Realizada", "Cancelada"
 
+        [ForeignKey("Con_PetId")]
         [ValidateNever]
         public Pet Pet { get; set; }
     }

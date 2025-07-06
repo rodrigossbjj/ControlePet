@@ -25,7 +25,7 @@ namespace ControlePetWeb.Controllers
                 return View("~/Views/AlterarPet/Index.cshtml", petParaEditar);
             }
 
-            return View("~/Views/AlterarPet/Index.cshtml",new Pet());
+            return View("~/Views/AlterarPet/Index.cshtml", new Pet());
         }
 
         [HttpPost]
@@ -93,6 +93,21 @@ namespace ControlePetWeb.Controllers
 
             ViewBag.Tutores = _context.Tutores.ToList();
             return View(pet);
+        }
+
+        public IActionResult HistoricoPets(string filtroNome)
+        {
+            var petsQuery = _context.Pets
+                .Include(p => p.Tutor)  // Inclui o tutor para mostrar na lista
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(filtroNome))
+            {
+                petsQuery = petsQuery.Where(p => p.pet_Nome.Contains(filtroNome));
+            }
+
+            ViewBag.FiltroNome = filtroNome; // Para manter o filtro na view
+            return View(petsQuery.ToList());
         }
     }
 }

@@ -40,7 +40,7 @@
                     </div>
                     <div class="detalhes-tutor detalhes-consulta">
                         <span><i class="fas fa-phone"></i> @tutor.tut_Telefone</span>
-                        <span><i class="fas fa-paw"></i> Pets Cadastrados: @tutor.Pets?.Count ?? 0</span>
+                        <span><i class="fas fa-paw"></i> Pets Cadastrados: @tutor.Pets?.Count</span>
                     </div>
                     <div class="acoes-tutor mt-3">
                         <a asp-action="HistoricoPorTutor" asp-controller="Consultas" asp-route-tutorId="@tutor.tut_Id" class="botao-confirmar">

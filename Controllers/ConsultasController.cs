@@ -45,10 +45,11 @@ namespace ControlePetWeb.Controllers
         // GET: Consultas
         public async Task<IActionResult> Index()
         {
-            var consultas = await _context.Consultas
+            var consultas = _context.Consultas
                 .Include(c => c.Pet)
+                    .ThenInclude(p => p.Tutor)
                 .OrderByDescending(c => c.Con_Data)
-                .ToListAsync();
+                .ToList();
 
             return View("~/Views/Consulta/Index.cshtml", consultas);
         }
@@ -68,21 +69,6 @@ namespace ControlePetWeb.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: Consultas/HistoricoPets
-        public IActionResult HistoricoPets(string filtroNome)
-        {
-            var petsQuery = _context.Pets
-                .Include(p => p.Tutor)  // Inclui o tutor para mostrar na lista
-                .AsQueryable();
-
-            if (!string.IsNullOrEmpty(filtroNome))
-            {
-                petsQuery = petsQuery.Where(p => p.pet_Nome.Contains(filtroNome));
-            }
-
-            ViewBag.FiltroNome = filtroNome; // Para manter o filtro na view
-            return View(petsQuery.ToList());
-        }
 
         // GET: Consultas/HistoricoPorPet/5
         public IActionResult HistoricoPorPet(int petId)
@@ -105,5 +91,59 @@ namespace ControlePetWeb.Controllers
 
             return View(pet);
         }
+
+        public IActionResult HistoricoTutores(string filtroNome)
+        {
+            // Carrega os tutores com a contagem de pets (mas não carrega todas as consultas ainda)
+            var query = _context.Tutores
+                .Include(t => t.Pets)  // Inclui os pets para poder contar
+                .AsQueryable();
+
+            // Aplica filtro se existir
+            if (!string.IsNullOrEmpty(filtroNome))
+            {
+                query = query.Where(t => t.tut_Nome.Contains(filtroNome));
+            }
+
+            // Ordena por nome do tutor e executa a query
+            var tutores = query.OrderBy(t => t.tut_Nome)
+                              .ToList();
+
+            // Passa o filtro atual para a view poder repopular o campo
+            ViewBag.FiltroNome = filtroNome;
+
+            return View("~/Views/Consulta/HistoricoTutores.cshtml", tutores);
+        }
+
+        // GET: Consultas/HistoricoPorTutor/5
+        public IActionResult HistoricoPorTutor(int tutorId)
+        {
+            var tutor = _context.Tutores
+                .Include(t => t.Pets)  // Carrega os pets do tutor
+                    .ThenInclude(p => p.Consultas)  // Carrega as consultas de cada pet
+                .FirstOrDefault(t => t.tut_Id == tutorId);
+
+            if (tutor == null)
+            {
+                return NotFound();
+            }
+
+            // Ordena os pets (opcional)
+            tutor.Pets = tutor.Pets?
+                .OrderBy(p => p.pet_Nome)
+                .ToList();
+
+            // Para cada pet, ordena suas consultas por data decrescente
+            foreach (var pet in tutor.Pets ?? Enumerable.Empty<Pet>())
+            {
+                pet.Consultas = pet.Consultas?
+                    .OrderByDescending(c => c.Con_Data)
+                    .ThenByDescending(c => c.Con_Hora)
+                    .ToList();
+            }
+
+            return View("~/Views/Consulta/HistoricoPorTutor.cshtml", tutor);
+        }
+
     }
 }

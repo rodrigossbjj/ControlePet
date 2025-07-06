@@ -15,7 +15,8 @@ namespace ControlePetWeb
 
             // Configura DbContext com SQL Server
             builder.Services.AddDbContext<Context>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")).EnableSensitiveDataLogging() // <- log completo
+                .LogTo(Console.WriteLine, LogLevel.Information));
 
             // Configura autenticação com cookies
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
