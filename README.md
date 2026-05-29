@@ -1,0 +1,1 @@
+CuidaPet é um sistema de gerenciamento para clínicas veterinárias, focado em automação e flexibilidade. Desenvolvido para facilitar o dia a dia dos proprietários de clínicas, o sistema oferece recursos que tornam a gestão mais simples e eficiente.
